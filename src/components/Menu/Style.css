@@ -1,0 +1,15 @@
+.Menu{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 35px 0;
+    background-color: white;
+}
+
+.Menu > a{
+    color: #2A2A2A;
+    text-decoration: none;
+    padding: 0 12px;
+    font-weight: 700;
+}

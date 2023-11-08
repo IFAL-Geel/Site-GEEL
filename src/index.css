@@ -1,0 +1,29 @@
+:root{
+  background: #43e97b;
+  background: linear-gradient(90deg, rgba(67,233,123,1) 0%, rgba(80,250,137,1) 100%);
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #14622E;
+  border-radius: 8px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
