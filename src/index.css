@@ -1,6 +1,5 @@
 :root{
-  background: #43e97b;
-  background: linear-gradient(90deg, rgba(67,233,123,1) 0%, rgba(80,250,137,1) 100%);
+  background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
 }
 
 #root{
