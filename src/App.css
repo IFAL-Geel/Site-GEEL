@@ -4,9 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  background: #43e97b;
-  background: linear-gradient(90deg, rgba(67,233,123,1) 0%, rgba(80,250,137,1) 100%);
 }
 
 .imgHeaderInner > img{
