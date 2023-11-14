@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root{
   background: #43e97b;
   background: linear-gradient(90deg, rgba(67,233,123,1) 0%, rgba(80,250,137,1) 100%);
@@ -11,7 +13,7 @@
 *{
   padding: 0;
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body::-webkit-scrollbar {
