@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div className="imgHeaderInner">
-        <img src={LogoGEEl} alt="Logo GEEL" />
+        <img src={LogoGEEl} alt="" />
       </div>
       <AppRoutes />
     </>
