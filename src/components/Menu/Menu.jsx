@@ -4,7 +4,7 @@ import "./Menu.css"
 export default function Menu(props) {
 
     const token = "IGQWRPLUg3b0NhRmF4V2U0NGtsTFJCXzJsWnBWQUpnSGItMm52NTlVcm1DWE9ZANFMxbWk5dHFGekE4aWlfMGpGZA05zQVNoUnN5UXZAfX3M1aHptaFJYMVkyWW95aFlrQWNLUlFZAenBzVFFlempBaWVndVB3VDcyb28ZD"
-    const redirect_uri = "https://geelifal.vercel.app/"
+    const redirect_uri = "https://geel-git-instaapitest-geel-ifal.vercel.app/"
     const client_id = "1045488653544602"
     const scope = "user_profile,user_media"
     const response_type = "code"
