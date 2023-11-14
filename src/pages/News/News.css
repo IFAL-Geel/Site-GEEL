@@ -1,0 +1,46 @@
+.News{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(241, 241, 241) 100%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsPostInner{
+    width: 50%;
+}
+
+.paginationButtons{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    margin: 0px 0 10px 0;
+    justify-content: end;
+}
+
+.paginationButtons > button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 3em;
+    color: #43E97B;
+    transition: .2s ease;
+}
+
+.paginationButtons > button:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.paginationButtons > select{
+    width: 60px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #43E97B;
+    color: white;
+}
