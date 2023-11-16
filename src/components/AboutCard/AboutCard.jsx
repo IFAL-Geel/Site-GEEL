@@ -4,16 +4,17 @@ import rightArrow from "../../assets/aboutAssets/rightArrow.svg";
 
 export default function AboutCard(props) {
     const content = props.content;
+    const limit = 11;
     const handleClick = event => {
         if (event.target.className === "AboutCard__leftArrow") {
             if (props.parentState.current === 0) {
-                props.parentState.setter(props.parentState.limit);
+                props.parentState.setter(limit);
             } else {
                 props.parentState.setter(props.parentState.current - 1);
             }
         }
         if (event.target.className === "AboutCard__rightArrow") {
-            if (props.parentState.current === props.parentState.limit) {
+            if (props.parentState.current === limit) {
                 props.parentState.setter(0);
             } else {
                 props.parentState.setter(props.parentState.current + 1);

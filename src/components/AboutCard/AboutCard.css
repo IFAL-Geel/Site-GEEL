@@ -30,7 +30,7 @@
     padding: 3em 6.5em 2em 2.5em;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: fit-content(0.5fr) 1fr;
+    grid-template-rows: 0.35fr 1fr;
 }
 
 .AboutCard__content__header {
@@ -50,7 +50,6 @@
     color: rgba(0,0,0,0.75);
     margin-bottom: 1em;
 }
-
 
 .AboutCard__content__body > p {
     text-align: justify;

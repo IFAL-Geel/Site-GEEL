@@ -1,9 +1,12 @@
-.About{
-    color: black;
-    width: 100%;
-    height: 100vh;
+.About__container {
+    width: 55em;
+}
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.division__line {
+    width: 350px;
+    height: 5px;
+    background: #43e97b;
+    background: linear-gradient(90deg, rgba(67,233,123,1) 0%, rgba(80,250,137,1) 100%);
+    border-radius: 20px;
+    margin: 0.2em 0 2em 0;
 }

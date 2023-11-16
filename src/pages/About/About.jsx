@@ -8,8 +8,18 @@ export default function About(props) {
     const [index, setIndex] = useState(0);
 
     return(
-        <div className="About">
-            <AboutCard content={data[index]} parentState={{current: index, setter: setIndex, limit: 11}}/>
-        </div>
+        <main className="About Main">
+            <div className="About__container">
+                <h2 className="About__title">Sobre nós</h2>
+                <div className="division__line"></div>
+                {/*general about text goes here with the logo*/}
+                <h2 className="About__title">Diretorias</h2>
+                <div className="division__line"></div>
+                <AboutCard
+                    content={data[index]}
+                    parentState={{current: index, setter: setIndex}}
+                />
+            </div>
+        </main>
     )
 }
