@@ -1,5 +1,5 @@
 .AboutCard {
-    width: 55em;
+    width: 50%;
     height: 30em;
     background-color: white;
 
@@ -30,7 +30,7 @@
     padding: 3em 6.5em 2em 2.5em;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.35fr 1fr;
+    grid-template-rows: 20% 80%;
 }
 
 .AboutCard__content__header {
@@ -40,7 +40,7 @@
 }
 
 .AboutCard__content__header > h3 {
-    font-size: 28px;
+    font-size: 1.5em;
     font-weight: 700;
 }
 
@@ -50,6 +50,7 @@
     color: rgba(0,0,0,0.75);
     margin-bottom: 1em;
 }
+
 
 .AboutCard__content__body > p {
     text-align: justify;

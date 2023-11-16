@@ -1,12 +1,27 @@
-.About__container {
-    width: 55em;
+.About {
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(241, 241, 241) 100%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.division__line {
-    width: 350px;
-    height: 5px;
-    background: #43e97b;
-    background: linear-gradient(90deg, rgba(67,233,123,1) 0%, rgba(80,250,137,1) 100%);
-    border-radius: 20px;
-    margin: 0.2em 0 2em 0;
+.About__geral {
+    width: 50%;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.About__geral > img {
+    width: 15em;
+    padding-right: 20px;
+}
+
+.About__geral > p {
+    text-indent: 1.5em;
+    text-align: justify;
+    hyphens: auto;
+    font-size: 16px;
 }
