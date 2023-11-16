@@ -1,0 +1,67 @@
+.NewsPostInner{
+    width: 100%;
+    height: 260px;
+    background-color: white;
+    margin: 10px 0;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    color: #2a2a2a;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+    outline: solid 1px rgba(230, 230, 230, 0.329)
+}
+
+.npImgInner{
+    height: 100%;
+    width: 40%;
+    position: relative;
+}
+
+.npImgInner > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.npTextInner{
+    width: 55%;
+    margin-left: 18px;
+}
+
+.npImgOverlay{
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(233,233,233,0) 100%);
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.npMoreInfoInner{
+    display: flex;
+    font-size: .6em;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.npMoreInfoInner > div{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: black;
+    margin: 0 8px;
+}
+
+.npDesc{
+    width: 100%;
+    color: black;
+}
+
+.NewsPostInner:hover{
+    transform: scale(1.01);
+}

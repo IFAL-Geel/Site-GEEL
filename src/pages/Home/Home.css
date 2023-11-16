@@ -1,0 +1,45 @@
+.Home{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(241, 241, 241) 100%);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.latestPostsInner{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lpSmallInner{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.homeFade{
+    width: 50%;
+    margin: 25px 0;
+    text-align: end;
+}
+
+.homeFade > a{
+    text-decoration: none;
+    font-weight: 500;
+    color: black;
+}
+
+.Home > a:hover{
+    text-decoration: underline;
+}
+
+.css-1c2fuzs{
+    display: flex;
+    flex-direction: column;
+}
+
