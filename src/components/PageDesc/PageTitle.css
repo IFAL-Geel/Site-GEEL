@@ -1,0 +1,18 @@
+.pageDescInner{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.pageDescInner > h2{
+    font-weight: 700;
+    font-size: 1.3em;
+}
+
+.pageDescInner > hr{
+    background-color: #43E97B;
+    width: 35%;
+    height: 2px;
+    outline: none;
+    border: none;
+    border-radius: 100px;
+}

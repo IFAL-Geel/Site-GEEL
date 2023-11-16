@@ -1,15 +1,17 @@
 import { useState } from 'react'
-import LogoGEEl from "./assets/images/LogoGEEL_Horizontal.png"
+import LogoGEEl from "./assets/images/LogoGeel_Horizontal.png"
 import './App.css'
 import AppRoutes from './routes/routes'
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <>
       <div className="imgHeaderInner">
-        <img src={LogoGEEl} alt="Logo GEEL" />
+        <img src={LogoGEEl} alt="" />
       </div>
       <AppRoutes />
+      <Footer />
     </>
   )
 }
