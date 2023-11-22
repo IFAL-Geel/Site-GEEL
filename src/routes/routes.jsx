@@ -3,6 +3,7 @@ import Home from "../pages/Home/Home"
 import Menu from "../components/Menu/Menu"
 import News from "../pages/News/News"
 import About from "../pages/About/About"
+import Report from "../pages/Report/Report"
 
 export default function AppRoutes(props) {
     return(
@@ -12,6 +13,7 @@ export default function AppRoutes(props) {
                 <Route path="/" element={<Home />} />
                 <Route path="/news" element={<News />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/reportChannel" element={<Report />} />
             </Routes>
         </BrowserRouter>
     )
