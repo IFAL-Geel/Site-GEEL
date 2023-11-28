@@ -4,7 +4,7 @@ import "./NewsPost.css"
 export default function NewsPost(props){
 
     const [textLimit, setTextLimit] = useState(270)
-    const [width, setWidth] = useState(901)
+    const [width, setWidth] = useState(window.innerWidth)
     const [titleLimit, setTitleLimit] = useState(55)
 
     const dateApi = props.date ?? null

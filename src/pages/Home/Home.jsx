@@ -11,7 +11,7 @@ import { useEffect, useState } from "react"
 export default function Home(props) {
 
     const { posts } = useApi()
-    const [width, setWidth] = useState(901)
+    const [width, setWidth] = useState(window.innerWidth)
 
     useEffect(() => {
         const updateWidth = () => {

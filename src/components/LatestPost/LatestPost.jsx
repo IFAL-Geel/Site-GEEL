@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 
 export default function LatestPost(props) {
 
-    const [width, setWidth] = useState(901)
+    const [width, setWidth] = useState(window.innerWidth)
     const [textLimit, setTextLimit] = useState(100)
 
     useEffect(() => {
