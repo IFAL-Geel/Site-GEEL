@@ -1,0 +1,125 @@
+.modalInner{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 3;
+    background-color: rgba(5, 12, 19, 0.575);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+}
+
+.modalBack{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.modalInfos{
+    position: relative;
+    max-height: 100%;
+    max-width: 100%;
+    padding: 1.5em .7em .5em 1.5em;
+    margin: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    overflow: auto;
+    pointer-events: auto;
+    line-height: 1.5em;
+}
+
+.modalInfos{
+    color: #000000;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 1.35em;
+}
+
+.modalInfos > dl > dt{
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+.modalInfos::-webkit-scrollbar {
+    width: 17px;
+}
+
+.modalInfos::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.modalInfos::-webkit-scrollbar-thumb{
+    background-color: #000000;
+    border-radius: 17px;
+    border: 5px solid transparent;
+    background-clip: content-box;
+}
+
+.privacy{
+    color: #4b3131;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px !important;
+    margin-bottom: 10px;
+}
+
+.privacyDesc{
+    width: 100%;
+    text-align: justify;
+    color: #a30a0a;
+}
+
+.modalInfos > p{
+    width: 100%;
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.footerModal{
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: .5em;
+    color: white;
+}
+
+.modalInfos > i{
+    position: fixed;
+    color: #000000;
+    font-size: 1.5em;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.modalInfos > i:hover{
+    opacity: .5;
+    transform: scale(1.1);
+}
+
+@media only screen and (max-width: 900px){
+    .modalInfos{
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+        font-size: 1em;
+        transform: scale(1) !important;
+    }
+
+    .privacyDesc{
+        margin-bottom: 90px;
+    }
+}
+
+@media only screen and (max-height: 650px){
+    .modalInfos{
+        transform: scale(.8);
+    }
+}

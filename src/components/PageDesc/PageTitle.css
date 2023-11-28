@@ -28,11 +28,11 @@
         background-color: #14622E;
         font-size: 1em;
         font-weight: 500;
-        width: 100px;
+        width: max-content;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 5px 5px;
+        padding: 5px 15px;
         border-radius: 20px;
     }
 
