@@ -84,14 +84,15 @@
 @media only screen and (max-width: 900px){
     .AboutCard{
         width: 89%;
-        height: 100vh;
+        height: auto;
         flex-direction: column;
         align-items: center;
+        padding-bottom: 20px;
     }
 
     .AboutCard__sideImage{
         width: 100%;
-        height: 250px;
+        height: 190px;
         border-radius: 20px 20px 0 0;
     }
 
@@ -124,5 +125,6 @@
 
     .AboutCard__content__header{
         height: 15%;
+        margin-top: 10px;
     }
 }
