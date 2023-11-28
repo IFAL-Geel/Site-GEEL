@@ -1,6 +1,7 @@
 import "./AboutCard.css";
 import leftArrow from "../../assets/aboutAssets/leftArrow.svg";
 import rightArrow from "../../assets/aboutAssets/rightArrow.svg";
+import geellogo from "../../assets/images/LogoGEEL.png"
 
 export default function AboutCard(props) {
     const content = props.content;
@@ -26,7 +27,7 @@ export default function AboutCard(props) {
         <div className="AboutCard">
             <img onClick={handleClick} className={"AboutCard__leftArrow"} src={leftArrow} alt={"any"}/>
             <div className="AboutCard__sideImage" style={{backgroundColor: content.img}}>
-                {/*<img src={content.img} alt={"any"}/>*/}
+                {/* <img src={geellogo} alt={"any"}/> */}
             </div>
             <div className={"AboutCard__content"}>
                 <div className={"AboutCard__content__header"}>

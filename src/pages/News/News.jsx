@@ -4,7 +4,8 @@ import { useApi } from "../../contexts/InstagramAPI/InstagramAPI"
 import NewsPost from "../../components/NewsPost/NewsPost"
 import LoadingBar from "../../components/LoadingBar/LoadingBar"
 import { Fade } from "react-awesome-reveal"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function News(props) {
 
@@ -31,6 +32,10 @@ export default function News(props) {
             console.log(pages)
         }
 
+        useEffect(() => {
+            window.scrollTo(0, 0)
+        }, [])
+
 
         const prevPage = () => {
             if(currentPage == 0){
@@ -48,13 +53,15 @@ export default function News(props) {
                 <div className="newsPostInner">
                     <Fade triggerOnce="true">
                         {currentIndex.map((post) => (
-                        <NewsPost
-                            key={post.timestamp}
-                            date={post.timestamp}
-                            img={post.media_type === "VIDEO" ? post.thumbnail_url : post.media_url}
-                            title={post.caption}
-                            desc={post.caption}
-                        />
+                            <Link key={post.id} to={`/news/${post.id}`} className="linkPost">
+                                <NewsPost
+                                    key={post.timestamp}
+                                    date={post.timestamp}
+                                    img={post.media_type === "VIDEO" ? post.thumbnail_url : post.media_url}
+                                    title={post.caption}
+                                    desc={post.caption}
+                                />
+                            </Link>
                         ))}
                     </Fade>
                 </div>

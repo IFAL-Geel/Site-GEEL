@@ -66,11 +66,10 @@
     transform: scale(1.02);
 }
 
-
 /* #==== SMALL POST ====# */
 
 .LatestPostInnerSmall{
-    width: 30%;
+    width: 32%;
     height: 260px;
     position: relative;
     display: flex;
@@ -82,4 +81,11 @@
 
 .LatestPostInnerSmall:hover{
     transform: scale(1.02);
+}
+
+@media only screen and (max-width: 900px){
+    .LatestPostInnerSmall{
+        width: 48%;
+        font-size: .8em;
+    }
 }

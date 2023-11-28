@@ -38,3 +38,9 @@ footer{
 .footerRight{
     margin-left: 55px;
 }
+
+@media only screen and (max-width: 900px){
+    .footerInner{
+        display: none;
+    }
+}
