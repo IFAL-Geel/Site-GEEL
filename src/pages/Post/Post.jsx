@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { useApi } from '../../contexts/InstagramAPI/InstagramAPI'
 import "./Post.css"
@@ -34,10 +34,14 @@ function Post() {
             <p key={index} className="text">{paragraph.trim()}</p>
         ));
         
+        useEffect(() => {
+            window.scrollTo(0, 0)
+        }, [])
+
 
         return (
             <div className='Post'>
-                <PageTitle title={"Notícias /" + title + "..."}/>
+                <PageTitle title={"Notícias /" + title + "..."} id={true} />
                 <div className="postInfoInner">
                     <p className="date">{finaldate}</p>
                     <div className="postImgInner">

@@ -14,7 +14,7 @@ export default function Menu(props) {
                 <Link to="/studentManual">Manual do Aluno</Link>
             </div>
 
-            <div className="MenuVertical">
+            <div className="MenuDock">
             <Link className="Active" to="/">
                 <i class="fa-solid fa-house"></i>
             </Link>

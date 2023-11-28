@@ -51,5 +51,24 @@
     .Home{
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
+        margin-bottom: 60px;
+    }
+
+    .homeFade{
+        width: 89%;
+    }
+
+    .homeFade > a{
+        background-color: #14622E;
+        width: max-content;
+        align-self: flex-end;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        margin: 0 0 25px 0 ;
+    }
+
+    .homeFade > a:hover{
+        opacity: .8;
     }
 }

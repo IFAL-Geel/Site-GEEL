@@ -1,61 +1,66 @@
 .AboutCard {
     width: 50%;
-    height: 30em;
+    height: 480px;
     background-color: white;
-
     position: relative;
-
     border-radius: 20px;
-    display: grid;
-    grid-template-columns: 0.4fr 1fr;
-    grid-template-rows: 1fr;
-
-    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15)
+    display: flex;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+    margin-bottom: 35px;
 }
 
 .AboutCard__sideImage {
+    height: 100%;
+    width: 250px;
     border-radius: 20px 0 0 20px;
 }
 
-
 .AboutCard__sideImage > img {
-    object-fit: cover;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     border-radius: 20px 0 0 20px;
-
 }
 
 .AboutCard__content {
-    padding: 3em 6.5em 2em 2.5em;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 20% 80%;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.AboutCard__content__header {
-    grid-row-start: 1;
-    grid-row-end: 2;
-
+.AboutCard__content__header{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
 
 .AboutCard__content__header > h3 {
-    font-size: 1.5em;
     font-weight: 700;
+    font-size: 1.4em;
 }
 
 .AboutCard__content__header > h4 {
-    font-size: 16px;
-    font-weight: 550;
-    color: rgba(0,0,0,0.75);
-    margin-bottom: 1em;
+    font-weight: 600;
+    font-size: 1em;
+    color: rgb(73, 73, 73);
 }
 
+.AboutCard__content__body{
+    width: calc(100% - 70px);
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
 
 .AboutCard__content__body > p {
+    font-size: .9em;
+    margin-top: 30px;
     text-align: justify;
-    hyphens: auto;
-    font-size: 16px;
 }
 
 .AboutCard__leftArrow {
@@ -74,4 +79,50 @@
     position: absolute;
     top: calc(50% - 35px);
     left: calc(100% - 70px);
+}
+
+@media only screen and (max-width: 900px){
+    .AboutCard{
+        width: 89%;
+        height: calc(100vh - 170px);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .AboutCard__sideImage{
+        width: 100%;
+        height: 250px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .AboutCard__content{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        height: 100%;
+    }
+
+    .AboutCard__rightArrow, .AboutCard__leftArrow{
+        top: 50px;
+    }
+
+    .AboutCard__leftArrow{
+        left: 0;
+    }
+
+    .AboutCard__content__body{
+        width: 100%;
+        height: 85%;
+    }
+
+    .AboutCard__content__body > p{
+        margin-top: 10px;
+    }
+
+    .AboutCard__content__header{
+        height: 15%;
+    }
 }

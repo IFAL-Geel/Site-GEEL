@@ -16,7 +16,7 @@
     font-size: .9em;
 }
 
-.MenuVertical{
+.MenuDock{
     width: 100vw;
     display: flex;
     justify-content: space-around;
@@ -28,9 +28,10 @@
     left: 0;
     z-index: 1000;
     display: none;
+    border-top: 1px solid rgb(194, 194, 194);
 }
 
-.MenuVertical > a{
+.MenuDock > a{
     font-size: 1.7em;
     color: #b1b1b1;
 }
@@ -40,7 +41,8 @@
         display: none;
     }
 
-    .MenuVertical{
+    .MenuDock{
         display: flex;
+
     }
 }

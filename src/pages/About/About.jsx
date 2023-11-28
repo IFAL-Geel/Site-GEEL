@@ -3,7 +3,7 @@ import { useState } from "react";
 import './About.css'
 import AboutCard from "../../components/AboutCard/AboutCard.jsx";
 import PageTitle from "../../components/PageDesc/PageTitle.jsx";
-import logoGeel from "../../assets/images/LogoGEEL.png";
+import logoGeel from "../../assets/images/LogoGeel_Horizontal.png";
 import data from "../../data/aboutData/diretorias.js";
 
 export default function About(props) {
@@ -13,7 +13,9 @@ export default function About(props) {
         <div className="About">
             <PageTitle title="Sobre nós" />
             <div className="About__geral">
-                <img src={logoGeel} alt="Logo do GEEL" />
+                <div className="aboutImgInner">
+                    <img src={logoGeel} alt="Logo do GEEL" />
+                </div>
 
                 <p>
                     O <abbr title="Grêmio Estudantil Edson Luís">GEEL</abbr> orienta-se pelos princípios da defesa de
