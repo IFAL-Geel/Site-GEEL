@@ -16,3 +16,27 @@
     border: none;
     border-radius: 100px;
 }
+
+@media only screen and (max-width: 900px){
+    .pageDescInner{
+        width: 89%;
+        margin-top: 25px;
+        color: white;
+    }
+
+    .pageDescInner >h2{
+        background-color: #14622E;
+        font-size: 1em;
+        font-weight: 500;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 5px;
+        border-radius: 20px;
+    }
+
+    .pageDescInner > hr{
+        display: none;
+    }
+}

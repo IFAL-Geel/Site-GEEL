@@ -65,3 +65,21 @@
 .NewsPostInner:hover{
     transform: scale(1.01);
 }
+
+@media only screen and (max-width: 900px){
+    .NewsPostInner{
+        height: 180px;
+    }
+
+    .npTextInner{
+        margin-left: 10px;
+    }
+
+    .npTitle{
+        font-size: 1em;
+    }
+
+    .npDesc{
+        font-size: .7em;
+    }
+}

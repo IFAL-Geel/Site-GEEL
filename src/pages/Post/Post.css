@@ -1,0 +1,97 @@
+.Post{
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(241, 241, 241) 100%);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.postInfoInner{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.postInfoInner > .postImgInner{
+    width: 100%;
+    height: 250px;
+    position: relative;
+}
+
+.postInfoInner >.postImgInner > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.date{
+    font-size: .75em;
+    color: rgb(54, 54, 54);
+    font-style: italic;
+    margin: 10px 0;
+    font-weight: 500;
+}
+
+.to{
+    font-size: .85em;
+    color: rgb(54, 54, 54);
+    font-weight: 500;
+    margin: 10px 0 5px 0;
+}
+
+.toStyle{
+    font-style: italic;
+}
+
+.text{
+    margin: 15px 0;
+    font-size: 1.2em;
+}
+
+.backPost{
+    color: white;
+    background-color: #43E97B;
+    padding: 5px 30px;
+    border-radius: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    width: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.postLnks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25px 0;
+    transition: .2s ease;
+}
+
+.postLnks > .instaLnk{
+    padding: 5px 35px;
+    border-radius: 20px;
+    height: min-content;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    background: #f09433; 
+    color: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+    transition: .2s ease;
+}
+
+.backPost:hover{
+    transform: scale(1.05);
+}
+
+.instaLnk:hover{
+    transform: scale(1.03);
+}

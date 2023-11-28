@@ -9,7 +9,7 @@ export function ApiProvider({ children }) {
     useEffect(() => {
         const fetchData = async () => {
             const token = "IGQWRNRzlPWjgyeHVBSktVN0ZAYWjM1SjlLWlRwOWJBSUhWcGd0dGVLZA3lSclU5RV81aEJwRDRSYjF3Xy1ZAN2s0T0ttYWdPcFNCLUlxU1ZA4eDdvTjJneG9Jb3ZATV1U4bWxYYjdOQWk1ZATE0Y3JWUG5vWmtDSjNrUjgZD";
-            const basicUrl = `https://graph.instagram.com/me/media?fields=caption,media_type,timestamp,thumbnail_url,media_url&access_token=${token}`;
+            const basicUrl = `https://graph.instagram.com/me/media?fields=caption,id,media_type,timestamp,thumbnail_url,media_url&access_token=${token}`;
 
             try {
                 const response = await fetch(basicUrl)

@@ -1,4 +1,4 @@
-.Menu{
+.MenuHorizontal{
     display: flex;
     width: 100%;
     justify-content: center;
@@ -8,10 +8,39 @@
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(241, 241, 241) 100%);
 }
 
-.Menu > a{
+.MenuHorizontal > a{
     color: #2A2A2A;
     text-decoration: none;
     padding: 0 10px;
     font-weight: 700;
     font-size: .9em;
+}
+
+.MenuVertical{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    background: rgb(255,255,255);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.MenuVertical > a{
+    font-size: 1.7em;
+    color: #b1b1b1;
+}
+
+@media only screen and (max-width: 900px){
+    .MenuHorizontal{
+        display: none;
+    }
+
+    .MenuVertical{
+        display: flex;
+    }
 }
