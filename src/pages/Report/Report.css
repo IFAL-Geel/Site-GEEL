@@ -254,6 +254,15 @@ select:focus{
     margin-top: 8px;
     font-size: .9em;
   }
+
+  .reportFormInner{
+    width: 89%;
+  }
+
+  .optionsInner{
+    top: -30px;
+    right: 5px;
+  }
 }
 
 @media only screen and (max-height: 650px){

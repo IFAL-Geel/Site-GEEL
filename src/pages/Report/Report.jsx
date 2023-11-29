@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import './Report.css'
 import PageTitle from '../../components/PageDesc/PageTitle'
+import ReportInfo from '../../components/ReportInfo/ReportInfo'
 
 function Report() {
   const [message, setMessage] = useState("")
@@ -13,11 +14,12 @@ function Report() {
   const [number, setNumber] = useState("")
 
   useEffect(() => {
+    const button = document.querySelector(".reportSend")
+    button.innerHTML = "Enviar"
     if(message.trim() !== "" && message.trim().length >= 100 && dir != ""){
       setSendEnabled(true)
     } else {
       setSendEnabled(false)
-      
     }
   },[message, dir])
 
@@ -74,6 +76,9 @@ function Report() {
         setMessage("")
         button.innerHTML = "Enviado"
         button.style.backgroundColor = "gray"
+        inputs.forEach(input => {
+          input.style.pointerEvents = "auto"
+        });
         setShowThanks(true)})
       .catch(error => console.log(error));
     }
@@ -81,8 +86,8 @@ function Report() {
   return (
     <div className="ReportInner">
         <PageTitle title="Canal de Denúncias" />
-      {/* <Thanks show={showThanks}/>
-      <Modal onClose={() => setShowModal(false)} show={showModal}/> */}
+      {/* <Thanks show={showThanks}/> */}
+      <ReportInfo onClose={() => setShowModal(false)} show={showModal}/>
       <div className="reportFormInner">
         <form className="formInner">
           <div className="inputInner nameInput">
