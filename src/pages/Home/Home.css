@@ -8,67 +8,101 @@
     align-items: center;
 }
 
-.latestPostsInner{
-    width: 50%;
+.HomeJournal{
+    width: 100%;
+    height: 500px;
+    background-color: #003366;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.hjLeft{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
     align-items: center;
 }
 
-.lpSmallInner{
-    width: 100%;
+.hjLImgInner{
+    width: 600px;
+    height: 80%;
+    background-color: #b62828;
+    border-radius: 10px;
+}
+
+.hjRight{
+    width: 50%;
+    height: 70%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: space-between;
 }
 
-.homeFade{
-    width: 50%;
-    margin: 25px 0;
-    text-align: end;
+.hjRTextsInner > h1{
+    width: 80%;
+    color: white;
 }
 
-.homeFade > a{
+.hjRTextsInner > h3{
+    width: 80%;
+    color: #b62828;
+    font-weight: 700;
+    font-size: 1em;
+}
+
+.hjRLink{
+    color: #003366;
+    font-weight: 700;
     text-decoration: none;
-    font-weight: 500;
-    color: black;
+    padding: 10px 25px;
+    background-color: white;
+    border-radius: 20px;
+    transition: .2s ease;
 }
 
-.Home > a:hover{
-    text-decoration: underline;
+.hjRLinkAll{
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 25px;
+    background-color: transparent;
+    border-radius: 20px;
+    outline: 1px white solid;
+    margin-left: 10px;
+    transition: .2s ease;
 }
 
-.css-1c2fuzs{
+.hjRLink:hover{
+    color: white;
+    background-color: transparent;
+    outline: 1px white solid;
+}
+
+.hjRLinkAll:hover{
+    color: #003366;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.hjROldVersionsInner{
     display: flex;
-    flex-direction: column;
+}
+
+.oldVersDemo{
+    width: 130px;
+    height: 130px;
+    background-color: #b62828;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
 @media only screen and (max-width: 900px){
-    .latestPostsInner{
-        width: 89%;
-    }
-
     .Home{
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
         margin-bottom: 60px;
-    }
-
-    .homeFade{
-        width: 89%;
-    }
-
-    .homeFade > a{
-        background-color: #14622E;
-        width: max-content;
-        align-self: flex-end;
-        color: white;
-        padding: 5px 15px;
-        border-radius: 20px;
-        margin: 0 0 25px 0 ;
-    }
-
-    .homeFade > a:hover{
-        opacity: .8;
     }
 }

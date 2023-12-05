@@ -8,6 +8,10 @@
     font-size: 1.3em;
 }
 
+.pageDescInner.scroll{
+    margin-top: 90px;
+}
+
 .pageDescInner > hr{
     background-color: #43E97B;
     width: 35%;

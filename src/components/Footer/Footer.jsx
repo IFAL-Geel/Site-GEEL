@@ -16,7 +16,7 @@ export default function Footer(props) {
 
                             <div className="footerContact footerSection">
                                 <h3>Contatos</h3>
-                                <p>(82) 99999-9999</p>
+                                <p>(82) 99327-4102</p>
                                 <p>gremioedsonluisifal@gmail.com</p>
                                 <p>@geelifal</p>
                             </div>
