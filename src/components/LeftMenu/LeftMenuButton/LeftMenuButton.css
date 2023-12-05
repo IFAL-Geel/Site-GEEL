@@ -1,0 +1,23 @@
+.lmLinkInner{
+    height: 27px;
+    width: 6px;
+    background-color: red;
+    font-size: .7em;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 1px 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.lmLinkInner > p{
+    color: white;
+    text-decoration: none;
+    margin-right: 6px;
+}
+
+.lmLinkInner:hover{ 
+    width: 95%;
+}

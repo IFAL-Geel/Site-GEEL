@@ -5,10 +5,17 @@ import { Fade } from "react-awesome-reveal"
 import { useApi } from "../../contexts/InstagramAPI/InstagramAPI"
 import LoadingBar from "../../components/LoadingBar/LoadingBar"
 import { useEffect, useState } from "react"
+import OldJournal from "../../components/OldJournal/OldJournal"
 
 export default function Home(props) {
 
     const { posts } = useApi()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+
     if(posts){
         return(
             <div className="Home">
@@ -27,14 +34,14 @@ export default function Home(props) {
 
                         <div className="hjRLinksInner">
                             <Link className="hjRLink">Ler Edição Mensal</Link>
-                            <Link className="hjRLinkAll">Todas Edições</Link>
+                            <Link className="hjRLinkAll" to={"/journal"}>Todas Edições</Link>
                         </div>
 
                         <div className="hjROldVersionsInner">
-                            <div className="oldVersDemo"></div>
-                            <div className="oldVersDemo"></div>
-                            <div className="oldVersDemo"></div>
-                            <div className="oldVersDemo"></div>
+                            <OldJournal />
+                            <OldJournal />
+                            <OldJournal />
+                            <OldJournal />
                         </div>
                     </div>
                 </div>

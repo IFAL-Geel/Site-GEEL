@@ -1,7 +1,22 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./Menu.css";
+import { useEffect, useState } from "react";
 
 export default function Menu(props) {
+
+    const path = useLocation()
+
+    const [width, setWidth] = useState(window.innerWidth)
+
+    useEffect(() => {
+        const updateWidth = () => {
+            setWidth(window.innerWidth)
+        }
+        window.addEventListener("resize", updateWidth)
+        return () => {
+            window.removeEventListener("resize", updateWidth)
+        }
+    }, [])
 
     function scrollAlter(){
         const header = document.querySelector(".MenuHorizontal")
@@ -29,18 +44,19 @@ export default function Menu(props) {
         link.classList.add("MenuActive")
     }
 
-    window.onscroll = (scrollAlter)
+    if(width >= 900){
+        window.onscroll = (scrollAlter)
+    }
 
     return (
         <div className="Menu">
             <div className="MenuHorizontal">
-                <Link onClick={() => selectLink("homeLink")} className="MenuLink MenuActive homeLink" to="/">
+                <Link onClick={() => selectLink("homeLink")} className={`MenuLink homeLink ${path.pathname === "/" ? "MenuActive" : ""}`} to="/">
                     Início
                 </Link>
-                <Link onClick={() => selectLink("newsLink")} className="MenuLink newsLink" to="/news">Notícias</Link>
-                <Link onClick={() => selectLink("aboutLink")} className="MenuLink aboutLink" to="/about">Sobre Nós</Link>
-                <Link onClick={() => selectLink("rcLink")} className="MenuLink rcLink" to="/reportChannel">Canal de Denúncias</Link>
-                <Link onClick={() => selectLink("smLink")} className="MenuLink smLink" to="/studentManual">Manual do Aluno</Link>
+                <Link onClick={() => selectLink("newsLink")} className={`MenuLink newsLink ${path.pathname.startsWith("/news") ? "MenuActive" : ""}`} to="/news">Notícias</Link>
+                <Link onClick={() => selectLink("aboutLink")} className={`MenuLink aboutLink ${path.pathname === "/about" ? "MenuActive" : ""}`} to="/about">Sobre Nós</Link>
+                <Link onClick={() => selectLink("rcLink")} className={`MenuLink rcLink ${path.pathname === "/reportChannel" ? "MenuActive" : ""}`} to="/reportChannel">Canal de Denúncias</Link>
             </div>
 
             <div className="MenuDock">
@@ -55,9 +71,6 @@ export default function Menu(props) {
             </Link>
             <Link to="/reportChannel">
                 <i class="fa-solid fa-bullhorn"></i>
-            </Link>
-            <Link to="/studentManual">
-                <i class="fa-solid fa-book"></i>
             </Link>
             </div>
         </div>

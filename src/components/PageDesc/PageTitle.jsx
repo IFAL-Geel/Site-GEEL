@@ -26,7 +26,7 @@ export default function PageTitle(props) {
     })
 
     return(
-        <div className="pageDescInner">
+        <div className="pageDescInner" style={{width: props.width ?? "50%"}}>
             <h2>{props.title ?? "Novidades"}</h2>
             <hr></hr>
         </div>

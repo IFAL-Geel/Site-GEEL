@@ -60,7 +60,7 @@ export default function HomeFeed() {
     } else if(posts && width < 900){
         return(
             <div className="Home">
-                    <PageDesc />
+                    <PageTitle />
                         <div className="latestPostsInner">
                         <Fade triggerOnce="true">
                             <div className="lpSmallInner">

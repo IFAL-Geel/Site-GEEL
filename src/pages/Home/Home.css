@@ -1,6 +1,6 @@
 .Home{
     background: rgb(255,255,255);
-    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(241, 241, 241) 100%);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, #f1f1f1 100%);
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -11,7 +11,7 @@
 .HomeJournal{
     width: 100%;
     height: 500px;
-    background-color: #003366;
+    background-color: #003a74;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,13 +48,13 @@
 
 .hjRTextsInner > h3{
     width: 80%;
-    color: #b62828;
+    color: #d43030;
     font-weight: 700;
     font-size: 1em;
 }
 
 .hjRLink{
-    color: #003366;
+    color: #003a74;
     font-weight: 700;
     text-decoration: none;
     padding: 10px 25px;
@@ -82,21 +82,13 @@
 }
 
 .hjRLinkAll:hover{
-    color: #003366;
+    color: #003a74;
     background-color: white;
     border-radius: 20px;
 }
 
 .hjROldVersionsInner{
     display: flex;
-}
-
-.oldVersDemo{
-    width: 130px;
-    height: 130px;
-    background-color: #b62828;
-    margin-right: 10px;
-    border-radius: 5px;
 }
 
 @media only screen and (max-width: 900px){
