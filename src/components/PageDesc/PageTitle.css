@@ -1,5 +1,4 @@
 .pageDescInner{
-    width: 50%;
     margin-bottom: 20px;
 }
 
@@ -8,9 +7,13 @@
     font-size: 1.3em;
 }
 
+.pageDescInner.scroll{
+    margin-top: 90px;
+}
+
 .pageDescInner > hr{
     background-color: #43E97B;
-    width: 35%;
+    width: 200px;
     height: 2px;
     outline: none;
     border: none;

@@ -69,7 +69,7 @@
 /* #==== SMALL POST ====# */
 
 .LatestPostInnerSmall{
-    width: 32%;
+    width: 100%;
     height: 260px;
     position: relative;
     display: flex;

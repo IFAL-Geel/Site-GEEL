@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import './About.css'
 import AboutCard from "../../components/AboutCard/AboutCard.jsx";
@@ -8,6 +8,10 @@ import data from "../../data/aboutData/diretorias.js";
 
 export default function About(props) {
     const [index, setIndex] = useState(0);
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return(
         <div className="About">

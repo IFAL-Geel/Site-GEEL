@@ -14,6 +14,10 @@ function Report() {
   const [number, setNumber] = useState("")
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     const button = document.querySelector(".reportSend")
     button.innerHTML = "Enviar"
     if(message.trim() !== "" && message.trim().length >= 100 && dir != ""){

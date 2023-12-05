@@ -5,10 +5,15 @@ import News from "../pages/News/News"
 import About from "../pages/About/About"
 import Report from "../pages/Report/Report"
 import Post from "../pages/Post/Post"
+import BackTop from "../components/BackTop/BackTop"
+import Journals from "../pages/Journals/Journals"
+import LeftMenu from "../components/LeftMenu/LeftMenu"
 
 export default function AppRoutes(props) {
     return(
         <BrowserRouter>
+            <LeftMenu /> 
+            <BackTop />
             <Menu />
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -16,6 +21,7 @@ export default function AppRoutes(props) {
                 <Route path="/news/:postId" element={<Post />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/reportChannel" element={<Report />} />
+                <Route path="/journal" element={<Journals />} />
             </Routes>
         </BrowserRouter>
     )

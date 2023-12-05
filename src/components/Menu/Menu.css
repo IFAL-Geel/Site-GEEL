@@ -6,6 +6,7 @@
     padding: 35px 0;
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(241, 241, 241) 100%);
+    transition: .5s ease;
 }
 
 .MenuHorizontal > a{
@@ -14,6 +15,25 @@
     padding: 0 10px;
     font-weight: 700;
     font-size: .9em;
+    transition: .1s ease;
+}
+
+.MenuHorizontal.scroll{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(67,233,123,1) 0%, rgba(80,250,137,1) 100%);;
+    z-index: 1000;
+    padding: 25px 0;
+}
+
+.MenuHorizontal.scroll > a{
+    color: white;
+}
+
+.MenuHorizontal.scroll > .MenuActive{
+    color: black !important;
 }
 
 .MenuDock{
@@ -34,6 +54,14 @@
 .MenuDock > a{
     font-size: 1.7em;
     color: #b1b1b1;
+}
+
+.MenuActive{
+    color: #43E97B !important;
+}
+
+.MenuHorizontal > a:hover{
+    opacity: .7;
 }
 
 @media only screen and (max-width: 900px){
