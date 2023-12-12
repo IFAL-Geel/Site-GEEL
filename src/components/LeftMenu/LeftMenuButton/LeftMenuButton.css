@@ -10,6 +10,7 @@
     margin: 1px 0;
     cursor: pointer;
     text-decoration: none;
+    transition: .4s ease;
 }
 
 .lmLinkInner > p{
