@@ -14,18 +14,26 @@
 
 .homeFade{
     width: 40%;
-    margin: 25px 0;
+    margin: 0 0 10px 0;
     text-align: end;
 }
 
 .homeFade > a{
+    width: max-content;
     text-decoration: none;
-    font-weight: 500;
-    color: black;
+    font-weight: 600;
+    color: white;
+    background-color: #14622E;
+    padding: 10px 40px;
+    font-size: .7em;
+    border-radius: 30px;
+    align-self: flex-end;
 }
 
-.Home > a:hover{
-    text-decoration: underline;
+.homeFade > a:hover{
+    outline: 1px solid #14622E;
+    background-color: transparent;
+    color: #14622E;
 }
 
 .css-1c2fuzs{
