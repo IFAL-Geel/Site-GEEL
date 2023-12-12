@@ -1,5 +1,5 @@
 .latestPostsInner{
-    width: 50%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,7 +13,7 @@
 }
 
 .homeFade{
-    width: 50%;
+    width: 40%;
     margin: 25px 0;
     text-align: end;
 }

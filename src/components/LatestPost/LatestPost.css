@@ -2,7 +2,7 @@
 
 .lpImgInner{
     width: 100%;
-    height: 260px;
+    height: 220px;
     position: absolute;
     top: 0;
     left: 0;
@@ -35,7 +35,7 @@
 
 .lpTextsInner > h3{
     font-weight: 700;
-    font-size: 1.3em;
+    font-size: 1em;
     margin-bottom: 10px;
     color: white;
 }
@@ -53,7 +53,7 @@
 
 .LatestPostInnerLarge{
     width: 100%;
-    height: 260px;
+    height: 220px;
     position: relative;
     display: flex;
     align-items: end;
@@ -70,7 +70,7 @@
 
 .LatestPostInnerSmall{
     width: 100%;
-    height: 260px;
+    height: 220px;
     position: relative;
     display: flex;
     align-items: end;

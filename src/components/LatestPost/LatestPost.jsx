@@ -40,7 +40,7 @@ export default function LatestPost(props) {
         return(
             <div className="LatestPostInnerSmall">
                 <div className="lpTextsInner">
-                    <h3 className="lpTile">{props.title != null ? props.title.slice(0 ,textLimit) + "..." : "Lorem ipsum dolor sit amet consectetur adipiscing elit."}</h3>
+                    <h3 className="lpTile">{props.title != null ? props.title.slice(0 ,40) + "..." : "Lorem ipsum dolor sit amet consectetur adipiscing elit."}</h3>
                 </div>
                 <div className="lpImgInner">
                     <img src={props.img ?? "https://png.pngtree.com/thumb_back/fh260/background/20230523/pngtree-the-geometry-of-the-abstract-cubes-creates-a-futuristic-scene-image_2606442.jpg"} alt="" />

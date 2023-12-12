@@ -24,7 +24,7 @@ export default function HomeFeed() {
     if(posts && width > 900){
         return(
             <div className="Home">
-                <PageTitle />
+                <PageTitle width="40%"/>
                     <div className="latestPostsInner">
                     <Fade triggerOnce="true">
                         <Link key={posts.data[0].id} to={`/news/${posts.data[0].id}`} className="linkPost">
@@ -71,7 +71,6 @@ export default function HomeFeed() {
                             <NewsPost date={posts.data[3].timestamp} img={posts.data[3].media_type == "VIDEO" ? posts.data[3].thumbnail_url : posts.data[3].media_url} title={posts.data[3].caption} desc={posts.data[3].caption} />
                             <NewsPost date={posts.data[4].timestamp} img={posts.data[4].media_type == "VIDEO" ? posts.data[4].thumbnail_url : posts.data[4].media_url} title={posts.data[4].caption} desc={posts.data[4].caption} />
                             <NewsPost date={posts.data[5].timestamp} img={posts.data[5].media_type == "VIDEO" ? posts.data[5].thumbnail_url : posts.data[5].media_url} title={posts.data[5].caption} desc={posts.data[5].caption} />
-                            <NewsPost date={posts.data[6].timestamp} img={posts.data[6].media_type == "VIDEO" ? posts.data[6].thumbnail_url : posts.data[6].media_url} title={posts.data[6].caption} desc={posts.data[6].caption} />
                             </Fade>
                         </div>
                         <Fade className="homeFade" triggerOnce="true">
