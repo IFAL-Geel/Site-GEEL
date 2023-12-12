@@ -47,9 +47,6 @@ export default function HomeFeed() {
                         <Link key={posts.data[5].id} to={`/news/${posts.data[5].id}`} className="linkPost">
                             <NewsPost date={posts.data[5].timestamp} img={posts.data[5].media_type == "VIDEO" ? posts.data[5].thumbnail_url : posts.data[5].media_url} title={posts.data[5].caption} desc={posts.data[5].caption} />
                         </Link>
-                        <Link key={posts.data[6].id} to={`/news/${posts.data[6].id}`} className="linkPost">
-                            <NewsPost date={posts.data[6].timestamp} img={posts.data[6].media_type == "VIDEO" ? posts.data[6].thumbnail_url : posts.data[6].media_url} title={posts.data[6].caption} desc={posts.data[6].caption} />
-                        </Link>
                         </Fade>
                     </div>
                     <Fade className="homeFade" triggerOnce="true">
