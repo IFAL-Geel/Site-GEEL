@@ -6,6 +6,7 @@ import { useApi } from "../../contexts/InstagramAPI/InstagramAPI"
 import LoadingBar from "../../components/LoadingBar/LoadingBar"
 import { useEffect, useState } from "react"
 import OldJournal from "../../components/OldJournal/OldJournal"
+import PageTitle from "../../components/PageDesc/PageTitle"
 
 export default function Home(props) {
 
@@ -20,6 +21,11 @@ export default function Home(props) {
         return(
             <div className="Home">
                 <HomeFeed />
+
+                <div className="HomeClubes">
+                    <PageTitle title="Clubes" width="92%"/>
+                </div>
+
                 <div className="HomeJournal">
                     <div className="hjLeft">
                         <div className="hjLImgInner">

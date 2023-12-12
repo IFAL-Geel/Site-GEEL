@@ -15,7 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 100px;
 }
 
 .hjLeft{
@@ -89,6 +88,15 @@
 
 .hjROldVersionsInner{
     display: flex;
+}
+
+.HomeClubes{
+    width: 100%;
+    background-color: rgb(218, 218, 218);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
 }
 
 @media only screen and (max-width: 900px){
