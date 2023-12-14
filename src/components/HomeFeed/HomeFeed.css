@@ -28,6 +28,7 @@
     font-size: .7em;
     border-radius: 30px;
     align-self: flex-end;
+    margin-bottom: 25px;
 }
 
 .homeFade > a:hover{
