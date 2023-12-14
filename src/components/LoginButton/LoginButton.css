@@ -1,0 +1,44 @@
+.LoginButton{
+    background-color: transparent;
+    padding: 9px 15px;
+    border-radius: 5px;
+    font-size: .8em;
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    position: relative;
+    z-index: 1000;
+    transition: .5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginButton::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    background: #43E97B;
+    z-index: -1;
+    transform: scaleX(0);
+    transition: .5s ease;
+    transform-origin: 0 0;
+}
+
+.LoginButton:hover::after, .LoginButton.scroll:hover::after{
+    transform: scaleX(1);
+}
+
+.LoginButton.scroll::after{
+    background: #ffffff;
+}
+
+.LoginButton > i{
+    margin-right: 5px;
+}
+

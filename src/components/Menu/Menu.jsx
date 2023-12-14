@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Menu.css";
 import { useEffect, useState } from "react";
+import LoginButton from "../LoginButton/LoginButton";
 
 export default function Menu(props) {
 
@@ -21,14 +22,16 @@ export default function Menu(props) {
     function scrollAlter(){
         const header = document.querySelector(".MenuHorizontal")
         const title = document.querySelector(".pageDescInner")
-        const buttons = document.querySelector(".MenuLink")
+        const loginButton = document.querySelector(".LoginButton")
 
         if(document.documentElement.scrollTop >= 80){
             header.classList.add("scroll")
             title.classList.add("scroll")
+            loginButton.classList.add("scroll")
         } else {
             header.classList.remove("scroll")
             title.classList.remove("scroll")
+            loginButton.classList.remove("scroll")
         }
     }
 
@@ -57,6 +60,9 @@ export default function Menu(props) {
                 <Link onClick={() => selectLink("newsLink")} className={`MenuLink newsLink ${path.pathname.startsWith("/news") ? "MenuActive" : ""}`} to="/news">Notícias</Link>
                 <Link onClick={() => selectLink("aboutLink")} className={`MenuLink aboutLink ${path.pathname === "/about" ? "MenuActive" : ""}`} to="/about">Sobre Nós</Link>
                 <Link onClick={() => selectLink("rcLink")} className={`MenuLink rcLink ${path.pathname === "/reportChannel" ? "MenuActive" : ""}`} to="/reportChannel">Canal de Denúncias</Link>
+                <div className="loginButtonInner">
+                    <LoginButton />
+                </div>
             </div>
 
             <div className="MenuDock">

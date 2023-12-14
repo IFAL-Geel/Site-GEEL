@@ -7,6 +7,7 @@
     background: rgb(255,255,255);
     background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgb(241, 241, 241) 100%);
     transition: .5s ease;
+    position: relative;
 }
 
 .MenuHorizontal > a{
@@ -62,6 +63,11 @@
 
 .MenuHorizontal > a:hover{
     opacity: .7;
+}
+
+.loginButtonInner{
+    position: absolute;
+    right: 30px;
 }
 
 @media only screen and (max-width: 900px){
