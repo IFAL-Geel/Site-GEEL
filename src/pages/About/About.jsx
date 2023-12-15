@@ -5,6 +5,7 @@ import AboutCard from "../../components/AboutCard/AboutCard.jsx";
 import PageTitle from "../../components/PageDesc/PageTitle.jsx";
 import logoGeel from "../../assets/images/LogoGeel_Horizontal.png";
 import data from "../../data/aboutData/diretorias.js";
+import Footer from "../../components/Footer/Footer.jsx";
 
 export default function About(props) {
     const [index, setIndex] = useState(0);
@@ -40,6 +41,7 @@ export default function About(props) {
                 content={data[index]}
                 parentState={{current: index, setter: setIndex}}
             />
+            <Footer />
         </div>
     )
 }
