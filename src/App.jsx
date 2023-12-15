@@ -11,7 +11,6 @@ function App() {
         <img src={LogoGEEl} alt="" />
       </div>
       <AppRoutes />
-      <Footer />
     </>
   )
 }

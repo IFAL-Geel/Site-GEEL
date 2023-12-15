@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useApi } from '../../contexts/InstagramAPI/InstagramAPI'
 import "./Post.css"
 import PageTitle from '../../components/PageDesc/PageTitle'
+import Footer from '../../components/Footer/Footer'
 
 function Post() {
     const { posts } = useApi()
@@ -54,6 +55,7 @@ function Post() {
                         <Link to={"/news"} className='backPost'>Voltar</Link>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     }

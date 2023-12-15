@@ -7,6 +7,8 @@ import LoadingBar from "../../components/LoadingBar/LoadingBar"
 import { useEffect, useState } from "react"
 import OldJournal from "../../components/OldJournal/OldJournal"
 import PageTitle from "../../components/PageDesc/PageTitle"
+import Footer from "../../components/Footer/Footer"
+import LeftMenu from "../../components/LeftMenu/LeftMenu"
 
 export default function Home(props) {
 
@@ -20,6 +22,7 @@ export default function Home(props) {
     if(posts){
         return(
             <div className="Home">
+                <LeftMenu /> 
                 <HomeFeed />
 
                 <div className="HomeClubes">
@@ -51,12 +54,14 @@ export default function Home(props) {
                         </div>
                     </div>
                 </div>
+                <Footer />
             </div>
         )
     } else {
         return(
             <div className="Home">
                 <LoadingBar />
+                <Footer />
             </div>
         )
     }
