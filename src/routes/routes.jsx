@@ -8,11 +8,11 @@ import Post from "../pages/Post/Post"
 import BackTop from "../components/BackTop/BackTop"
 import Journals from "../pages/Journals/Journals"
 import LeftMenu from "../components/LeftMenu/LeftMenu"
+import Auth from "../pages/Auth/Auth"
 
 export default function AppRoutes(props) {
     return(
         <BrowserRouter>
-            <LeftMenu /> 
             <BackTop />
             <Menu />
             <Routes>
@@ -22,6 +22,7 @@ export default function AppRoutes(props) {
                 <Route path="/about" element={<About />} />
                 <Route path="/reportChannel" element={<Report />} />
                 <Route path="/journal" element={<Journals />} />
+                <Route path="/auth" element={<Auth />} />
             </Routes>
         </BrowserRouter>
     )
