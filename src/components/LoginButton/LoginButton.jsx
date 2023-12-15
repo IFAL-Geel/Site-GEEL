@@ -3,7 +3,7 @@ import "./LoginButton.css"
 
 export default function LoginButton() {
     return(
-        <Link className="LoginButton">
+        <Link to="/auth" className="LoginButton">
             <i class="fa-solid fa-user"></i>
             Login
         </Link>
