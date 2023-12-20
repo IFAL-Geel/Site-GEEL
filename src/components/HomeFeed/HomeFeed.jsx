@@ -26,7 +26,7 @@ export default function HomeFeed() {
             <div className="Home">
                 <PageTitle width="40%"/>
                     <div className="latestPostsInner">
-                    <Fade triggerOnce="true">
+                    <Fade triggerOnce="true" className="fadePosts">
                         <Link key={posts.data[0].id} to={`/news/${posts.data[0].id}`} className="linkPost">
                             <LatestPost type="large" img={posts.data[0].media_type == "VIDEO" ? posts.data[0].thumbnail_url : posts.data[0].media_url} title={posts?.data[0]?.caption}/>
                         </Link>
@@ -59,7 +59,7 @@ export default function HomeFeed() {
             <div className="Home">
                     <PageTitle />
                         <div className="latestPostsInner">
-                        <Fade triggerOnce="true">
+                        <Fade triggerOnce="true" className="fadePosts">
                             <div className="lpSmallInner">
                                 <LatestPost type="small" img={posts.data[0].media_type == "VIDEO" ? posts.data[0].thumbnail_url : posts.data[0].media_url} title={posts?.data[0]?.caption}/>
                                 <LatestPost type="small" img={posts.data[1].media_type == "VIDEO" ? posts.data[1].thumbnail_url : posts.data[1].media_url} title={posts?.data[1]?.caption}/>

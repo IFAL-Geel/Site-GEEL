@@ -46,6 +46,10 @@
     width: 32%;
 }
 
+.fadePosts{
+    width: 100%;
+}
+
 @media only screen and (max-width: 900px){
     .latestPostsInner{
         width: 89%;
