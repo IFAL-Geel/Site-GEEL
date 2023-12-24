@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px 0 50px 0;
 }
 
 .Auth > form{
@@ -45,6 +46,12 @@
 
 .Auth > form > button:hover{
     background-color: #3ebe69;
+}
+
+.Auth > form > button:disabled{
+    background-color: gray !important;
+    color: black;
+    cursor: inherit;
 }
 
 .Auth > form > input::placeholder{

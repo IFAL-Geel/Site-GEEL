@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Menu.css";
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import LoginButton from "../LoginButton/LoginButton";
 
 export default function Menu(props) {
@@ -19,21 +19,56 @@ export default function Menu(props) {
         }
     }, [])
 
-    function scrollAlter(){
-        const header = document.querySelector(".MenuHorizontal")
-        const title = document.querySelector(".pageDescInner")
-        const loginButton = document.querySelector(".LoginButton")
+    
+    useEffect(() => {
+        if(path.pathname === "/auth"){
+            const header = document.querySelector(".MenuHorizontal")
+            const title = document.querySelector(".pageDescInner")
+            const loginButton = document.querySelector(".LoginButton")
 
-        if(document.documentElement.scrollTop >= 80){
-            header.classList.add("scroll")
-            title.classList.add("scroll")
-            loginButton.classList.add("scroll")
-        } else {
             header.classList.remove("scroll")
-            title.classList.remove("scroll")
+            try{
+                title.classList.remove("scroll")
+            } catch(e){
+                console.log("Objeto nn encontrado");
+            }
             loginButton.classList.remove("scroll")
         }
-    }
+    },)
+
+    useEffect(() => {
+        function scrollAlter() {
+            const header = document.querySelector(".MenuHorizontal")
+            const title = document.querySelector(".pageDescInner")
+            const loginButton = document.querySelector(".LoginButton")
+
+            if (document.documentElement.scrollTop >= 80) {
+                header.classList.add("scroll")
+                try{
+                    title.classList.remove("scroll")
+                } catch(e){
+                    console.log("Objeto nn encontrado");
+                }
+                loginButton.classList.add("scroll")
+            } else {
+                header.classList.remove("scroll")
+                try{
+                    title.classList.remove("scroll")
+                } catch(e){
+                    console.log("Objeto nn encontrado");
+                }
+                loginButton.classList.remove("scroll")
+            }
+        }
+
+        if (width >= 900 && path.pathname !== "/auth") {
+            window.onscroll = scrollAlter
+        }
+
+        return () => {
+            window.onscroll = null
+        };
+    }, [width, path.pathname]);
 
     function selectLink(linkText) {
         const link = document.querySelector("."+linkText)
@@ -45,10 +80,6 @@ export default function Menu(props) {
             button.classList.remove("MenuActive")
         })
         link.classList.add("MenuActive")
-    }
-
-    if(width >= 900){
-        window.onscroll = (scrollAlter)
     }
 
     return (

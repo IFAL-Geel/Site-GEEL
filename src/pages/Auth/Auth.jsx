@@ -1,6 +1,27 @@
+import { useContext, useEffect, useState } from "react"
 import "./Auth.css"
+import { AuthContext } from "../../contexts/InstagramAPI/authContext"
 
 export default function Auth() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    const [email, setEmail] = useState(null)
+    const [pass, setPass] = useState(null)
+
+    const { signIn } = useContext(AuthContext)
+
+    function login(e){
+        e.preventDefault()
+
+        const button = document.querySelector(".btn-login")
+        button.disabled = true
+
+        signIn(email, pass)
+    }
+
     return(
         <div className="Auth">
             <form action="">
@@ -10,14 +31,24 @@ export default function Auth() {
                 <h1>Entre na sua conta</h1>
                 <p>Faça login para acessar a area de diretores</p>
                 <label htmlFor="">Email</label>
-                <input type="text" name="email" placeholder="Digite o email aqui" />
+                <input 
+                    value={email} 
+                    onChange={(e) => setEmail(e.target.value)} 
+                    type="text" 
+                    name="email" 
+                    placeholder="Digite o email aqui" />
                 <label htmlFor="">Senha</label>
-                <input type="password" name="password" id="" placeholder="Digite a senha aqui" />
+                <input
+                    value={pass}
+                    onChange={(e) => setPass(e.target.value)}
+                    type="password" 
+                    name="password" 
+                    placeholder="Digite a senha aqui" />
                 <div className="">
                     <input type="checkbox" name="rememberMe" id="" />
                     <label htmlFor="rememberMe">Lembrar-se</label>
                 </div>
-                <button>Entrar</button>
+                <button className="btn-login" onClick={(e) => login(e)}>Entrar</button>
             </form>
         </div>
     )
