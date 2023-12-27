@@ -1,0 +1,34 @@
+.AdmOption{
+    width: 240px;
+    height: 240px;
+    background-color: #ffffff;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(8, 54, 14);
+    text-decoration: none;
+    transition: .3s ease;
+}
+
+.AdmOption > p{
+    font-size: 2.2em;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.AdmOption > i{
+    font-size: 4em;
+    margin-bottom: 15px;
+}
+
+.AdmOptionLink{
+    text-decoration: none;
+    width: 240px;
+    height: 240px;
+}
+
+.AdmOption:hover{
+    background-color: rgb(252, 252, 67);
+}

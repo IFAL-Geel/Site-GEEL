@@ -2,12 +2,16 @@ import { Link, useLocation } from "react-router-dom";
 import "./Menu.css";
 import { useEffect, useLayoutEffect, useState } from "react";
 import LoginButton from "../LoginButton/LoginButton";
+import UserButton from "../UserButton/UserButton";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/InstagramAPI/authContext";
 
 export default function Menu(props) {
 
     const path = useLocation()
 
     const [width, setWidth] = useState(window.innerWidth)
+    const { signed } = useContext(AuthContext)
 
     useEffect(() => {
         const updateWidth = () => {
@@ -92,7 +96,7 @@ export default function Menu(props) {
                 <Link onClick={() => selectLink("aboutLink")} className={`MenuLink aboutLink ${path.pathname === "/about" ? "MenuActive" : ""}`} to="/about">Sobre Nós</Link>
                 <Link onClick={() => selectLink("rcLink")} className={`MenuLink rcLink ${path.pathname === "/reportChannel" ? "MenuActive" : ""}`} to="/reportChannel">Canal de Denúncias</Link>
                 <div className="loginButtonInner">
-                    <LoginButton />
+                    {signed ? <UserButton /> : <LoginButton />}
                 </div>
             </div>
 

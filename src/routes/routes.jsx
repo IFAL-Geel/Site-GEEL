@@ -10,6 +10,7 @@ import Journals from "../pages/Journals/Journals"
 import LeftMenu from "../components/LeftMenu/LeftMenu"
 import Auth from "../pages/Auth/Auth"
 import AuthProvider from "../contexts/InstagramAPI/authContext"
+import Admin from "../pages/Admin/Admin"
 
 export default function AppRoutes(props) {
     return(
@@ -25,6 +26,7 @@ export default function AppRoutes(props) {
                     <Route path="/reportChannel" element={<Report />} />
                     <Route path="/journal" element={<Journals />} />
                     <Route path="/auth" element={<Auth />} />
+                    <Route path="/admin" element={<Admin />} />
                 </Routes>
             </AuthProvider>
         </BrowserRouter>

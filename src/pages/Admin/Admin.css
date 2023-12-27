@@ -1,0 +1,66 @@
+.Admin{
+    padding-top: 30px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admTopInfos{
+    display: flex;
+    flex-direction: column;
+}
+
+.admTopInfos{
+    display: flex;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admTopTexts > p{
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.admTopTexts > p > span{
+    font-weight: 800;
+    color: rgb(128, 3, 128);
+}
+
+.admTextDir{
+    font-size: .75em;
+}
+
+.admTopInfos > i{
+    font-size: 1.5em;
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+.admTopInfos > i:hover{
+    transform: scale(1.1);
+}
+
+.admGridOptionsInner{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 30px 50px;
+}
+
+.admOptionsinner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #226132;
+    padding: 30px 0;
+    margin-top: 50px;
+}
