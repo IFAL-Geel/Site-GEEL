@@ -9,21 +9,24 @@ import BackTop from "../components/BackTop/BackTop"
 import Journals from "../pages/Journals/Journals"
 import LeftMenu from "../components/LeftMenu/LeftMenu"
 import Auth from "../pages/Auth/Auth"
+import AuthProvider from "../contexts/InstagramAPI/authContext"
 
 export default function AppRoutes(props) {
     return(
         <BrowserRouter>
-            <BackTop />
-            <Menu />
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/news/:postId" element={<Post />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/reportChannel" element={<Report />} />
-                <Route path="/journal" element={<Journals />} />
-                <Route path="/auth" element={<Auth />} />
-            </Routes>
+            <AuthProvider>
+                <BackTop />
+                <Menu />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/news" element={<News />} />
+                    <Route path="/news/:postId" element={<Post />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/reportChannel" element={<Report />} />
+                    <Route path="/journal" element={<Journals />} />
+                    <Route path="/auth" element={<Auth />} />
+                </Routes>
+            </AuthProvider>
         </BrowserRouter>
     )
 }

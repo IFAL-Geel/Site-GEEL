@@ -7,10 +7,8 @@ import AuthProvider from './contexts/InstagramAPI/authContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AuthProvider>
       <ApiProvider>
         <App />
       </ApiProvider>
-    </AuthProvider>
   </React.StrictMode>,
 )

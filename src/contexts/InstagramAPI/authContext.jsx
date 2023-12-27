@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { app } from "../../services/firebaseConfig";
+import { useNavigate } from "react-router-dom"
 
 export const AuthContext = createContext()
 
@@ -8,6 +9,7 @@ export default function AuthProvider({ children }) {
 
     const [currentUser, setCurrentUser] = useState(null)
     const auth = getAuth(app)
+    const navigate = useNavigate()
 
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged((user) => {
@@ -38,6 +40,9 @@ export default function AuthProvider({ children }) {
             const token = await user.getIdToken()
             localStorage.setItem("@AuthFirebase:user", JSON.stringify(user))
             localStorage.setItem("@AuthFirebase:token", token)
+
+            navigate("/")
+
         } catch(err){
             console.error("Erro ao fazer login", err.message)
             throw err

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react"
 import "./Auth.css"
 import { AuthContext } from "../../contexts/InstagramAPI/authContext"
+import { useNavigate } from "react-router-dom"
 
 export default function Auth() {
 
@@ -10,8 +11,9 @@ export default function Auth() {
 
     const [email, setEmail] = useState(null)
     const [pass, setPass] = useState(null)
+    const navigate = useNavigate()
 
-    const { signIn } = useContext(AuthContext)
+    const { signIn, signed } = useContext(AuthContext)
 
     function login(e){
         e.preventDefault()
@@ -19,8 +21,25 @@ export default function Auth() {
         const button = document.querySelector(".btn-login")
         button.disabled = true
 
+        button.innerHTML = "Carregando..."
+
         signIn(email, pass)
+    
     }
+
+    useEffect(() => {
+        const button = document.querySelector(".btn-login")
+        button.disabled = false
+
+        button.innerHTML = "Entrar"
+
+    }, [email, pass])
+
+    useEffect(() => {
+        if(signed){
+            navigate("/")
+        }
+    }, [signed, navigate])
 
     return(
         <div className="Auth">
