@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
 import { app } from "../../services/firebaseConfig";
 import { useNavigate } from "react-router-dom"
 
@@ -49,7 +49,16 @@ export default function AuthProvider({ children }) {
         }
     }
 
-    return <AuthContext.Provider value={{ signIn, signed: !!currentUser, currentUser }}>
+    const signOff = () => {
+        localStorage.removeItem("@AuthFirebase:user")
+        localStorage.removeItem("@AuthFirebase:token")
+
+        setCurrentUser(null)
+
+        document.location.reload()
+    }
+
+    return <AuthContext.Provider value={{ signIn, signed: !!currentUser, currentUser, signOff }}>
         { children }
     </AuthContext.Provider>
 }

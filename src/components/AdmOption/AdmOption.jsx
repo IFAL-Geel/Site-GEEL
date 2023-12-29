@@ -4,10 +4,16 @@ import "./AdmOption.css"
 
 export default function AdmOption(props){
     return(
-        <Link className="AdmOptionLink">
-            <div className="AdmOption">
-                <i class="fa-regular fa-newspaper"></i>
-                <p>Novo Post</p>
+        <Link className="AdmOption">
+            <div className="AdmOptionL">
+                <i class={props.icon ? "fa-regular fa-" + props.icon : "fa-regular fa-plus"}></i>
+            </div>
+
+            <div className="lineAdm"></div>
+
+            <div className="AdmOptionR">
+                <p className="admOptionTitle">{props.title ?? "Novo Post"}</p>
+                <p className="admOptionDesc">{props.desc ?? "Criar novo post para tela de notícias"}</p>
             </div>
         </Link>
     )
