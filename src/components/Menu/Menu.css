@@ -6,6 +6,7 @@
     padding: 35px 0;
     background: rgb(255,255,255);
     transition: .5s ease;
+    position: relative;
 }
 
 .MenuHorizontal > a{
@@ -22,7 +23,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: linear-gradient(90deg, rgba(67,233,123,1) 0%, rgba(80,250,137,1) 100%);;
+    background: linear-gradient(90deg, rgba(67,233,123,1) 0%, #50fa89 100%);;
     z-index: 1000;
     padding: 25px 0;
 }
@@ -61,6 +62,11 @@
 
 .MenuHorizontal > a:hover{
     opacity: .7;
+}
+
+.loginButtonInner{
+    position: absolute;
+    right: 30px;
 }
 
 @media only screen and (max-width: 900px){

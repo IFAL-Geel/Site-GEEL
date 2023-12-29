@@ -6,6 +6,7 @@ import LoadingBar from "../../components/LoadingBar/LoadingBar"
 import { Fade } from "react-awesome-reveal"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import Footer from "../../components/Footer/Footer"
 
 export default function News(props) {
 
@@ -74,6 +75,7 @@ export default function News(props) {
                     </select>
                     <button onClick={() => nextPage()}><i class="fa-solid fa-caret-right"></i></button>
                 </div>
+                <Footer />
             </div>
         )
     } else {

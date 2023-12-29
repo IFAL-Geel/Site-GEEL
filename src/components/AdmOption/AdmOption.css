@@ -1,0 +1,37 @@
+.AdmOption{
+    width: 290px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: rgb(8, 54, 14);
+    text-decoration: none;
+    transition: .3s ease;
+    outline: 1px solid rgb(231, 231, 231);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.AdmOptionL > i{
+    font-size: 1.7em;
+    margin-left: 14px;
+}
+
+.admOptionTitle{
+    font-size: .9em;
+    font-weight: 800;
+}
+
+.admOptionDesc{
+    font-size: .75em;
+    font-weight: 500;
+}
+
+.AdmOptionR{
+    margin-left: 10px;
+}
+
+.AdmOption:hover{
+    background-color: rgb(238, 238, 238);
+}
