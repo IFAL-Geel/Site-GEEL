@@ -50,19 +50,25 @@ export default function Auth() {
                 <h1>Entre na sua conta</h1>
                 <p>Faça login para acessar a area de diretores</p>
                 <label htmlFor="">Email</label>
-                <input 
-                    value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
-                    type="text" 
-                    name="email" 
-                    placeholder="Digite o email aqui" />
+                <div className="auth_input">
+                    <input 
+                        value={email} 
+                        onChange={(e) => setEmail(e.target.value)} 
+                        type="text" 
+                        name="email" 
+                        placeholder="Digite o email aqui" />
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
                 <label htmlFor="">Senha</label>
-                <input
-                    value={pass}
-                    onChange={(e) => setPass(e.target.value)}
-                    type="password" 
-                    name="password" 
-                    placeholder="Digite a senha aqui" />
+                <div className="auth_input">
+                    <input
+                        value={pass}
+                        onChange={(e) => setPass(e.target.value)}
+                        type="password" 
+                        name="password" 
+                        placeholder="Digite a senha aqui" />
+                    <i class="fa-solid fa-lock"></i>
+                </div>
                 <div className="">
                     <input type="checkbox" name="rememberMe" id="" />
                     <label htmlFor="rememberMe">Lembrar-se</label>
