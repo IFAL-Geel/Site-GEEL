@@ -91,7 +91,7 @@
 
 .HomeClubes, .HomeCourses{
     width: 100%;
-    background-color: rgb(218, 218, 218);
+    background-color: rgb(230, 230, 230);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,6 +113,58 @@
     .Home{
         border-top-right-radius: 20px;
         border-top-left-radius: 20px;
-        margin-bottom: 60px;
+    }
+
+    .HomeJournal{
+        flex-direction: column;
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .hjLeft{
+        width: 85%;
+        height: 250px;
+    }
+
+    .hjRight{
+        width: 85%;
+        justify-content: inherit;
+    }
+
+    .hjRTextsInner > h1{
+        width: 100%;
+        font-size: 1em !important;
+    }
+
+    .hjRTextsInner > h3{
+        font-size: .7em;
+    }
+
+    .hjRLinksInner{
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .hjRLink, .hjRLinkAll{
+        font-size: .7em;
+    }
+
+    .hjROldVersionsInner{
+        display: none;
+    }
+
+    .HomeCourses{
+        padding: 10px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 150px;
+    }
+
+    .coursesInner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: auto;
     }
 }

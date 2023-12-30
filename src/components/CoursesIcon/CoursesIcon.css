@@ -46,25 +46,59 @@
 }
 
 .CoursesIcon.meca:hover .CI_img_inner{
-    background-color: #FFE224 !important;;
+    background-color: #FFE224;
 }
 
 .CoursesIcon.quimica:hover .CI_img_inner{
-    background-color: #C60001 !important;;
+    background-color: #C60001;
 }
 
 .CoursesIcon.roads:hover .CI_img_inner{
-    background-color: #677778 !important;;
+    background-color: #677778;
 }
 
 .CoursesIcon.eletroverde:hover .CI_img_inner{
-    background-color: #018601 !important;;
+    background-color: #018601;
 }
 
 .CoursesIcon.eletroazul:hover .CI_img_inner{
-    background-color: #468BC3 !important;;
+    background-color: #468BC3;
 }
 
 .CoursesIcon.edifica:hover .CI_img_inner{
-    background-color: black !important;;
+    background-color: black;
+}
+
+@media only screen and (max-width: 900px){
+    .CoursesIcon.edifica > .CI_img_inner{
+        background-color: black;
+    }
+
+    .CoursesIcon.eletroazul > .CI_img_inner{
+        background-color: #468BC3;
+    }
+
+    .CI_img_inner{
+        background-color: #640183;
+    }
+    
+    .CoursesIcon.meca > .CI_img_inner{
+        background-color: #FFE224;
+    }
+    
+    .CoursesIcon.quimica > .CI_img_inner{
+        background-color: #C60001;
+    }
+    
+    .CoursesIcon.roads > .CI_img_inner{
+        background-color: #677778;
+    }
+    
+    .CoursesIcon.eletroverde > .CI_img_inner{
+        background-color: #018601;
+    }
+
+    .CoursesIcon:hover{
+        transform: scale(1);
+    }
 }

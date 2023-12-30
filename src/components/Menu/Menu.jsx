@@ -113,6 +113,7 @@ export default function Menu(props) {
             <Link to="/reportChannel">
                 <i class="fa-solid fa-bullhorn"></i>
             </Link>
+            {signed ? <UserButton /> : null}
             </div>
         </div>
     );

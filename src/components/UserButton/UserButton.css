@@ -2,6 +2,9 @@
     width: 60px;
     height: 60px;
     transition: .5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imgUserInner{
@@ -20,4 +23,17 @@
 
 .btn-User:hover{
     opacity: .8;
+}
+
+@media only screen and (max-width: 900px) {
+    .btn-User{
+        width: 28px;
+        height: 28px
+    }
+
+    .imgUserInner{
+        outline: 2px solid #b1b1b1;
+        width: 28px;
+        height: 28px;
+    }
 }

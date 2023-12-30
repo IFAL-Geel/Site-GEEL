@@ -22,7 +22,7 @@
 
 @media only screen and (max-width: 900px){
     .pageDescInner{
-        width: 89%;
+        width: 89% !important;
         margin-top: 25px;
         color: white;
     }

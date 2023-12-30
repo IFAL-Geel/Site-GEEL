@@ -35,3 +35,9 @@
 .AdmOption:hover{
     background-color: rgb(238, 238, 238);
 }
+
+@media only screen and (max-width: 900px){
+    .AdmOption{
+        width: 100%;
+    }
+}
