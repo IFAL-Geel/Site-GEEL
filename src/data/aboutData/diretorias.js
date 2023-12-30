@@ -1,7 +1,7 @@
 const data = [
     {
         title: "Presidência",
-        director: "Fulano de Tal",
+        director: "Gustavo Henrique",
         text:
             `
             O/a Presidente do Grêmio é responsável por representar a organização dentro e fora do Instituto Federal, 
@@ -17,7 +17,7 @@ const data = [
     },
     {
         title: "Vice-Presidência",
-        director: "Fulano de Tal",
+        director: "Marina de Moura",
         text:
             `
             Ao/a Vice-Presidente/a compete auxiliar o/a Presidente/a em todas as suas funções, atuando como substituto/a 
@@ -30,7 +30,7 @@ const data = [
     },
     {
         title: "Secretaria-Geral",
-        director: "Fulano de Tal",
+        director: "Diego Melo e Fábio Lima",
         text:
             `
             O Secretário-Geral do Grêmio desempenha papel crucial na gestão ao publicar comunicados, lavrar atas, 
@@ -42,7 +42,7 @@ const data = [
     },
     {
         title: "Secretaria de Patrimônio e Finanças",
-        director: "Fulano de Tal",
+        director: "Eduarda Lima",
         text:
             `
             O Secretário de Patrimônio e Finanças do Grêmio tem a responsabilidade de cuidar de todos os bens, tanto 
@@ -59,7 +59,7 @@ const data = [
     },
     {
         title: "Diretoria de Arte e Cultura",
-        director: "Fulano de Tal",
+        director: "Maria Luiza",
         text:
             `
             A Diretoria de Arte e Cultura tem como responsabilidades promover atividades culturais, como conferências, 
@@ -75,7 +75,7 @@ const data = [
     },
     {
         title: "Diretoria de Assistência Estudantil",
-        director: "Fulano de Tal",
+        director: "Pedro Danilo",
         text:
             `
             A Diretoria de Assistência Estudantil é encarregada de monitorar os pagamentos referentes à assistência 
@@ -91,7 +91,7 @@ const data = [
     },
     {
         title: "Diretoria de Assuntos Educacionais",
-        director: "Fulano de Tal",
+        director: "Geovana",
         text:
             `
             A Diretoria de Assuntos Educacionais desempenha diversas atribuições para promover um ambiente educacional 
@@ -109,7 +109,7 @@ const data = [
     },
     {
         title: "Diretoria de Assuntos Políticos",
-        director: "Fulano de Tal",
+        director: "Alexsandro Medeiros",
         text:
             `
             A Diretoria de Assuntos Políticos do Grêmio do IFAL desempenha um papel essencial na promoção de relações 
@@ -126,7 +126,7 @@ const data = [
     },
     {
         title: "Diretoria de Comunicação Social",
-        director: "Fulano de Tal",
+        director: "Lywya Eugênia",
         text:
             `
             A Diretoria de Comunicação Social do Grêmio do IFAL tem como missão garantir a liberdade de expressão dos 
@@ -143,7 +143,7 @@ const data = [
     },
     {
         title: "Diretoria de Diversidade Étnica",
-        director: "Fulano de Tal",
+        director: "Yasmin Vitória",
         text:
             `
             A Diretoria de Diversidade Étnica tem como responsabilidades promover a educação e sensibilização para o 
@@ -160,7 +160,7 @@ const data = [
     },
     {
         title: "Diretoria de Diversidade Sexual e de Gênero",
-        director: "Fulano de Tal",
+        director: "Lian Souza",
         text:
             `
             A Diretoria de Diversidade Sexual e de Gênero tem como missão promover a conscientização sobre diversidade 
@@ -174,7 +174,7 @@ const data = [
         img: "#ECCBD9",
     },{
         title: "Diretoria de Esportes",
-        director: "Fulano de Tal",
+        director: "Lara Beatriz",
         text:
             `
             À Diretoria de Esportes compete propor e executar projetos e atividades desportivas para o corpo discente do 
@@ -190,7 +190,7 @@ const data = [
         img: "#63474D",
     },{
         title: "Diretoria da Mulher",
-        director: "Fulano de Tal",
+        director: "Débora Ruthe",
         text:
             `
             À Diretoria da Mulher compete promover a conscientização e respeito aos direitos das mulheres por meio de 
@@ -206,7 +206,7 @@ const data = [
         img: "#EA3788",
     },{
         title: "Diretoria de Saúde e Meio Ambiente",
-        director: "Fulano de Tal",
+        director: "Girlene de Oliveira",
         text:
             `
             A Diretoria de Saúde e Meio Ambiente tem como atribuições promover palestras, exposições e concursos para 
@@ -220,7 +220,7 @@ const data = [
         img: "#709775",
     },{
         title: "Diretoria Social e de Eventos",
-        director: "Fulano de Tal",
+        director: "Estefane Mota",
         text:
             `
             Compete à Diretoria Social e de Eventos prestar assistência e lutar pela garantia dos direitos individuais e 
@@ -238,7 +238,7 @@ const data = [
     },
     {
         title: "Diretoria de Tecnologia e Inovação",
-        director: "Fulano de Tal",
+        director: "Eduardo Lucas",
         text:
             `
             A Diretoria de Tecnologia e Inovação tem como responsabilidades sugerir melhorias nas plataformas virtuais, 

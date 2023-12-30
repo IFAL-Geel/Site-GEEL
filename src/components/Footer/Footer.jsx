@@ -6,7 +6,6 @@ export default function Footer(props) {
         <div className="footerInner">
             <footer>
                 <div className="footerInfoInner">
-                    <Fade className="footerFade" cascade="true" triggerOnce="true">
                         <div className="footerLeft">
                             <div className="footerAdress footerSection">
                                 <h3>Grêmio Estudantil Edson Luís</h3>
@@ -53,7 +52,6 @@ export default function Footer(props) {
                                 <p>Tecnologia e Inovação</p>
                             </div>
                         </div>
-                    </Fade>
                 </div>
             </footer>
         </div>

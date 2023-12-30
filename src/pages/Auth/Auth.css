@@ -24,14 +24,29 @@
     margin-bottom: 5px;
 }
 
-.Auth > form > input{
+.auth_input{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.auth_input> input{
+    width: 100%;
     font-size: 1em;
     padding: 10px 17px 10px 40px;
     border-radius: 5px;
     border: 2px solid #000000;
     outline: none;
-    margin-bottom: 15px;
     font-weight: 600;
+}
+
+.auth_input > i{
+    position: absolute;
+    left: 13px;
+    font-size: 1.3em;
 }
 
 .Auth > form > button{
