@@ -64,6 +64,11 @@
 }
 
 @media only screen and (max-width: 900px){
+    .Admin{
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
     .admGridOptionsInner{
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(5, 1fr);
