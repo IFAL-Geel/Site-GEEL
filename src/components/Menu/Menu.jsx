@@ -113,7 +113,9 @@ export default function Menu(props) {
             <Link to="/reportChannel">
                 <i class="fa-solid fa-bullhorn"></i>
             </Link>
-            {signed ? <UserButton /> : null}
+            {signed ? <UserButton /> : <Link to="/auth">
+                <i style={{color: "#4ff888"}} class="fa-solid fa-arrow-right-to-bracket"></i>
+            </Link>}
             </div>
         </div>
     );
