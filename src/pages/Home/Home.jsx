@@ -1,5 +1,5 @@
 import "./Home.css"
-import HomeFeed from "../../components/HomeFeed/HomeFeed"
+// import HomeFeed from "../../components/HomeFeed/HomeFeed"
 import { Link } from "react-router-dom"
 import { Fade } from "react-awesome-reveal"
 import { useApi } from "../../contexts/InstagramAPI/InstagramAPI"
@@ -11,6 +11,8 @@ import Footer from "../../components/Footer/Footer"
 import LeftMenu from "../../components/LeftMenu/LeftMenu"
 import cursos from "../../data/aboutData/cursos"
 import CoursesIcon from "../../components/CoursesIcon/CoursesIcon.jsx"
+import LatestPost from "../../components/LatestPost/LatestPost.jsx"
+import HomePost from "../../components/HomePost/HomePost.jsx"
 
 export default function Home(props) {
 
@@ -25,7 +27,40 @@ export default function Home(props) {
         return(
             <div className="Home">
                 <LeftMenu /> 
-                <HomeFeed />
+                {/* <HomeFeed /> */}
+
+                <div className="HomeFeed">
+                    <PageTitle title="Novidades" width="92%" />
+                    <div className="lp_inner">
+                        <div className="lp_insta_inner">
+                            <div className="lp_img_inner">
+                                <LatestPost type="small" img={posts.data[0].media_type == "VIDEO" ? posts.data[0].thumbnail_url : posts.data[0].media_url} title={posts?.data[0]?.caption}/>
+                                <LatestPost type="small" img={posts.data[1].media_type == "VIDEO" ? posts.data[1].thumbnail_url : posts.data[1].media_url} title={posts?.data[1]?.caption}/>
+                            </div>
+                            <div className="lp_text_inner">
+                                <HomePost />
+                                <HomePost />
+                                <HomePost />
+                                <HomePost />
+                            </div>
+                        </div>
+
+                        <div className="lp_line"></div>
+
+                        <div className="lp_site_inner">
+                            <div className="lp_img_inner">
+                                <LatestPost type="small" img={posts.data[0].media_type == "VIDEO" ? posts.data[0].thumbnail_url : posts.data[0].media_url} title={posts?.data[0]?.caption}/>
+                                <LatestPost type="small" img={posts.data[1].media_type == "VIDEO" ? posts.data[1].thumbnail_url : posts.data[1].media_url} title={posts?.data[1]?.caption}/>
+                            </div>
+                            <div className="lp_text_inner">
+                                <HomePost />
+                                <HomePost />
+                                <HomePost />
+                                <HomePost />
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div className="HomeClubes">
                     <PageTitle title="Clubes" width="92%"/>

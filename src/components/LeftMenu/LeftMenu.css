@@ -2,11 +2,11 @@
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    width: 30px;
+    width: 27px;
     height: auto;
     background-color: white;
     z-index: 1000;
-    border: 1px solid rgb(219, 219, 219);
+    border: 1px solid rgb(241, 241, 241);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,8 +16,8 @@
 
 }
 
-.LeftMenu:hover{
+/* .LeftMenu:hover{
     width:100px;
     align-items:flex-start;
     padding-left: 12px
-}
+} */

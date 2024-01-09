@@ -11,14 +11,31 @@
     cursor: pointer;
     text-decoration: none;
     transition: .4s ease;
+    position: relative;
+    overflow: visible;
 }
 
-.lmLinkInner > p{
+.lmLinkInner > div{
+    position: absolute;
+    top: 0;
+    left: 6px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 0px;
+    background-color: black;
+    transition: .3s ease;
+}
+
+.lmLinkInner > div > p{
     color: white;
-    text-decoration: none;
-    margin-right: 6px;
+    font-weight: 400;
+    font-size: .9em;
+    letter-spacing: 2px;
+    margin-right: 5px;
 }
 
-.lmLinkInner:hover{ 
-    width: 95%;
+.lmLinkInner:hover > div{
+    width: 90px;
 }

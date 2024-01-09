@@ -1,0 +1,36 @@
+.HomePost{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+}
+
+.hp_line{
+    width: 5px;
+    height: 100%;
+    background-color: #359E00;
+}
+
+.hp_texts{
+    width: calc(100% - 5px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.hp_date{
+    color: #359E00;
+    font-size: .8em;
+    font-weight: 700;
+}
+
+.hp_text{
+    color: rgb(75, 74, 74);
+    text-decoration: none;
+}
+
+.hp_text:hover{
+    color: #359E00;
+}
