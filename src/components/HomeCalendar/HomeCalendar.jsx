@@ -1,4 +1,4 @@
-import "./homeCalendar.css"
+import "./HomeCalendar.css"
 import events from "../../mock/calendarEvents"
 import { useEffect, useState } from "react"
 import EventComp from "./EventComp/EventComp"
