@@ -10,6 +10,7 @@ export default function CoursesIcon(props) {
             <div className="CI_name">
                 <p>{props.name || "INFORMÁTICA"}</p>
             </div>
+            <a href={props.link}><i className="fa-brands fa-instagram"></i></a>
         </div>
     )
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import "./PageTitle.css"
+import LinkTitle from './LinkTitle/LinkTitle';
 
 export default function PageTitle(props) {
 
@@ -15,20 +16,16 @@ export default function PageTitle(props) {
         }
     }, [])
 
-    useEffect(() => {
-        if(width < 900 && props.id){
-            const item = document.querySelector(".pageDescInner")
-            item.style.display = "none"
-        } else {
-            const item = document.querySelector(".pageDescInner")
-            item.style.display = "block"
-        }
-    })
-
     return(
         <div className="pageDescInner" style={{width: props.width ?? "50%"}}>
-            <h2>{props.title ?? "Novidades"}</h2>
-            <hr></hr>
+            <div className="text_inner">
+                <h2>{props.title ?? "Novidades"}</h2>
+                <hr></hr>
+            </div>
+            <div className="pd_other">
+                {props.button && <LinkTitle to={props.to} text={props.text} ></LinkTitle>}
+                {props.date && <p className='pd_date'><span>{props.time}</span> •</p>}
+            </div>
         </div>
     )
 }

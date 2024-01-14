@@ -4,9 +4,10 @@
     border-radius: 10px 0;
     outline: 1px solid rgb(233, 233, 233);
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 19px 0px;
-    background-color: rgb(31, 31, 31);
+    background-color: #444648;
     transition: .3s ease;
     user-select: none;
+    position: relative;
 }
 
 .CI_img_inner{
@@ -37,8 +38,22 @@
     transition: .3s ease;
 }
 
+.CoursesIcon > a{
+    position: absolute;
+    top: 3px;
+    right: 6px;
+    text-decoration: none;
+    color: #444648;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
 .CoursesIcon:hover{
     transform: scale(1.05);
+}
+
+.CoursesIcon:hover > a{
+    color: white;
 }
 
 .CoursesIcon:hover .CI_img_inner{
@@ -70,6 +85,10 @@
 }
 
 @media only screen and (max-width: 900px){
+    .CoursesIcon > a{
+        color: white;
+    }
+
     .CoursesIcon.edifica > .CI_img_inner{
         background-color: black;
     }

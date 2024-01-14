@@ -1,0 +1,14 @@
+.LinkTitle{
+    font-size: .7em;
+    font-weight: 600;
+    padding: 5px 20px;
+    background-color: #3BC96A;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    transition: .2s ease;
+}
+
+.LinkTitle:hover{
+    background-color: #247740;
+}

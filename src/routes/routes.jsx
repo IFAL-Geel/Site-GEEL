@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route, useNavigate } from "react-router-dom"
 import Home from "../pages/Home/Home"
 import Menu from "../components/Menu/Menu"
 import News from "../pages/News/News"
@@ -12,6 +12,7 @@ import Auth from "../pages/Auth/Auth"
 import AuthProvider from "../contexts/InstagramAPI/authContext"
 import Admin from "../pages/Admin/Admin"
 import PrivateRoute from "./PrivateRoute"
+import { useEffect } from "react"
 
 export default function AppRoutes(props) {
     return(

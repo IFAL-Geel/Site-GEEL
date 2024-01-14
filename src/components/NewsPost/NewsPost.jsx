@@ -10,13 +10,9 @@ export default function NewsPost(props){
     const dateApi = props.date ?? null
     const formatedDate = new Date(dateApi)
     const day = ("0" + formatedDate.getDate()).slice(-2)
-    const mounth = [
-    "jan", "fev", "mar", "abr", "mai", "jun",
-    "jul", "ago", "set", "out", "nov", "dez"
-    ]
-    const finalMounth = mounth[formatedDate.getMonth()]
+    const finalMounth = formatedDate.getMonth()
     const year = formatedDate.getFullYear()
-    const finaldate = day + " " + finalMounth + ", " + year
+    const finaldate = day + "/" + finalMounth + "/" + year
 
     useEffect(() => {
         const updateWidth = () => {

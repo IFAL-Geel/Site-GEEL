@@ -51,9 +51,6 @@ function Post() {
                     </div>
                     <p className="to">De <span className="toStyle">Instagram</span></p>
                     {paragraphs}
-                    <div className="postLnks">
-                        <Link to={"/news"} className='backPost'>Voltar</Link>
-                    </div>
                 </div>
                 <Footer />
             </div>

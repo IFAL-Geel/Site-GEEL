@@ -1,10 +1,11 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Menu.css";
 import { useEffect, useLayoutEffect, useState } from "react";
 import LoginButton from "../LoginButton/LoginButton";
 import UserButton from "../UserButton/UserButton";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/InstagramAPI/authContext";
+import { ApiProvider, useApi } from "../../contexts/InstagramAPI/InstagramAPI";
 
 export default function Menu(props) {
 
@@ -12,6 +13,30 @@ export default function Menu(props) {
 
     const [width, setWidth] = useState(window.innerWidth)
     const { signed } = useContext(AuthContext)
+    const { fetchData } = useApi()
+
+    useEffect(() => {
+        const handleRouteChange = () => {
+            switch (path.pathname) {
+                case "/":
+                    document.title = "Grêmio Estudantil Edson Luís";
+                    break;
+                case "/news":
+                    document.title = "GEEL - Notícias";
+                    break;
+                case "/about":
+                    document.title = "GEEL - Sobre Nós";
+                    break;
+                case "/reportChannel":
+                    document.title = "GEEL - Canal de Denúncias";
+                    break;
+                default:
+                    document.title = "Grêmio Estudantil Edson Luís";
+            }
+        };
+    
+        handleRouteChange();
+    }, [path]);
 
     useEffect(() => {
         const updateWidth = () => {
@@ -65,9 +90,9 @@ export default function Menu(props) {
             }
         }
 
-        if (width >= 900 && path.pathname !== "/auth") {
-            window.onscroll = scrollAlter
-        }
+        // if (width >= 900 && path.pathname !== "/auth") {
+        //     window.onscroll = scrollAlter
+        // }
 
         return () => {
             window.onscroll = null
@@ -77,8 +102,6 @@ export default function Menu(props) {
     function selectLink(linkText) {
         const link = document.querySelector("."+linkText)
         const allLinks = document.querySelectorAll(".MenuLink")
-        console.log(link)
-        console.log(allLinks)
 
         allLinks.forEach((button) => {
             button.classList.remove("MenuActive")
@@ -89,7 +112,7 @@ export default function Menu(props) {
     return (
         <div className="Menu">
             <div className="MenuHorizontal">
-                <Link onClick={() => selectLink("homeLink")} className={`MenuLink homeLink ${path.pathname === "/" ? "MenuActive" : ""}`} to="/">
+                <Link onClick={() => {selectLink("homeLink"); fetchData()}} className={`MenuLink homeLink ${path.pathname === "/" ? "MenuActive" : ""}`} to="/">
                     Início
                 </Link>
                 <Link onClick={() => selectLink("newsLink")} className={`MenuLink newsLink ${path.pathname.startsWith("/news") ? "MenuActive" : ""}`} to="/news">Notícias</Link>

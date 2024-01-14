@@ -25,12 +25,16 @@
 .lp_inner{
     width: 92%;
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 .lp_site_inner, .lp_insta_inner{
-    width: 48%;
+    width: 49.2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .lp_img_inner{
@@ -39,7 +43,12 @@
 }
 
 .lp_text_inner{
-    margin: 30px 0;
+    margin: 30px 0 90px 0;
+}
+
+.lp_insta_inner > p, .lp_site_inner > p{
+    font-size: 1em;
+    font-weight: 700;
 }
 
 .HomeJournal{
@@ -49,6 +58,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 30px 0;
 }
 
 .hjLeft{
@@ -62,7 +72,7 @@
 .hjLImgInner{
     width: 600px;
     height: 80%;
-    background-color: #b62828;
+    background-color: #C6151C;
     border-radius: 10px;
 }
 
@@ -81,7 +91,7 @@
 
 .hjRTextsInner > h3{
     width: 80%;
-    color: #d43030;
+    color: #C6151C;
     font-weight: 700;
     font-size: 1em;
 }
@@ -124,24 +134,32 @@
     display: flex;
 }
 
-.HomeClubes, .HomeCourses{
+.HomeFridayCult, .HomeCourses, .HomeCalendar{
     width: 100%;
     background-color: rgb(230, 230, 230);
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 40px 0;
+    padding: 60px 0;
 }
 
 .HomeCourses{
-    background-color: white;
+    background-color: white
 }
 
+.HomeFridayCult, .HomeCalendar{
+    padding: 80px 0 100px 0;
+}
 .coursesInner{
-    width: 90%;
+    width: 92%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+.hmc_comps{
+    width: calc(92% + 14px);
+    display: flex;
 }
 
 @media only screen and (max-width: 900px){
@@ -153,7 +171,7 @@
     .HomeJournal{
         flex-direction: column;
         height: auto;
-        padding-bottom: 40px;
+        padding: 0 0 30px 0px;
     }
 
     .hjLeft{
@@ -201,5 +219,21 @@
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         width: auto;
+    }
+
+    .lp_inner{
+        flex-direction: column;
+    }
+
+    .lp_insta_inner, .lp_site_inner{
+        width: 100%;
+    }
+
+    .lp_text_inner{
+        margin: 30px 0;
+    }
+
+    .HomeFridayCult, .HomeCalendar{
+        padding: 20px 0 50px 0;
     }
 }

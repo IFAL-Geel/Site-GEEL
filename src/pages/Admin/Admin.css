@@ -52,6 +52,7 @@
     grid-template-rows: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
+    gap: 15px 0;
 }
 
 .admOptionsinner{

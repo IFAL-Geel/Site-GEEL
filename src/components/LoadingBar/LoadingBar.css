@@ -1,10 +1,15 @@
 .progress {
     width:120px;
     height:20px;
-    -webkit-mask:linear-gradient(90deg,#000 70%,#0000 0) 0/20%;
+    -webkit-mask:linear-gradient(90deg,#3BC96A 70%,#0000 0) 0/20%;
     background:
-    linear-gradient(#000 0 0) 0/0% no-repeat #ddd;
+    linear-gradient(#3BC96A 0 0) 0/0% no-repeat #ddd;
     animation:p4 2s infinite steps(6);
+    margin: 0px 0 40px 0;
+}
+
+.progress_inner{
+    min-height: 100vh;
 }
 
 @keyframes p4 {

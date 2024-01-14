@@ -26,6 +26,7 @@ export default function Admin(props) {
                         <AdmOption />
                         <AdmOption icon="copy" title="Novo Edital" desc="Fazer upload de edital"/>
                         <AdmOption icon="newspaper" title="Adicionar Jornal" desc="Adicione um novo jornal"/>
+                        <AdmOption icon="file-pdf" title="Adicionar Arquivo" desc="Faça upload de um pdf, docx e etc..."/>
                     </div>
                 </div>
     

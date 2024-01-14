@@ -1,0 +1,18 @@
+.NothingData{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: rgb(167, 167, 167);
+}
+
+.NothingData > i{
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+.NothingData > p{
+    font-size: calc(5em / 3.7);
+    font-weight: 600;
+}

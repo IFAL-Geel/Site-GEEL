@@ -1,0 +1,34 @@
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    6.67% {
+        opacity: 1;
+    }
+
+    93.33% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.HomeFriday{
+    width: 100%;
+    height: 160px;
+    padding: 0 7px;
+    animation: fadeInOut 15s infinite;
+}
+
+.HomeFriday > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.HomeFriday > img:hover{
+    transform: scale(1.03);
+}

@@ -1,0 +1,36 @@
+.EventComp{
+    width: 130px;
+    height: 150px;
+    background: #E6E6E6;
+    margin: 0 10px;
+    flex-shrink: 0;
+}
+
+.ec_date_inner{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    font-size: .7em;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: white;
+    background-color: #C6151C;
+}
+
+.ec_title_inner{
+    height: calc(100% - (.7em + 10px) );
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .7em;
+    font-weight: 700;
+}
+
+.ec_title_inner > p{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+}
