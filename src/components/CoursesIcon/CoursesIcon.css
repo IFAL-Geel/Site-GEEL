@@ -121,3 +121,9 @@
         transform: scale(1);
     }
 }
+
+
+[data-theme="dark"] .CoursesIcon{
+    outline-color: rgb(73, 73, 73);
+    box-shadow: none;
+}

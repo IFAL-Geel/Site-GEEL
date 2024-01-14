@@ -79,3 +79,15 @@
 
     }
 }
+
+[data-theme="dark"] .MenuHorizontal, .MenuDock{
+    background-color: #181A1B;
+}
+
+[data-theme="dark"] .MenuHorizontal > a{
+    color: #C7C2BB;
+}
+
+[data-theme="dark"] .MenuActive{
+    color: #68D696 !important;
+}

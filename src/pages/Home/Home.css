@@ -91,7 +91,7 @@
 
 .hjRTextsInner > h3{
     width: 80%;
-    color: #C6151C;
+    color: #e6171e;
     font-weight: 700;
     font-size: 1em;
 }
@@ -236,4 +236,46 @@
     .HomeFridayCult, .HomeCalendar{
         padding: 20px 0 50px 0;
     }
+}
+
+/* ### DARK THEME ### */
+
+[data-theme="dark"] .HomeFeed{
+    background-color: #181A1B;
+}
+
+[data-theme="dark"] .HomeFridayCult, .HomeCalendar{
+    background-color: #26292B;
+}
+
+[data-theme="dark"] .HomeJournal{
+    background-color: #002E5D;
+}
+
+[data-theme="dark"] .hjRTextsInner > h1{
+    color: #E8E6E3;
+}
+
+[data-theme="dark"] .hjRLinkAll{
+    color: #E8E6E3;
+    outline-color: #E8E6E3;
+}
+
+[data-theme="dark"] .hjRLinkAll:hover{
+    background-color: #E8E6E3;
+    color: #002E5D;
+}
+
+[data-theme="dark"] .hjRLink{
+    background-color: #E8E6E3;
+    color: #002E5D;
+}
+
+[data-theme="dark"] .hjRLink:hover{
+    outline-color: #E8E6E3;
+    color: #E8E6E3;
+}
+
+[data-theme="dark"] .HomeCourses{
+    background-color: #181A1B;
 }

@@ -65,3 +65,15 @@
         margin-bottom: 25px;
     }
 }
+
+[data-theme="dark"] .News{
+    background-color: #181A1B;
+}
+
+.paginationButtons > button{
+    color: #2B9E64;
+}
+
+.paginationButtons > select{
+    background-color: #2B9E64;
+}

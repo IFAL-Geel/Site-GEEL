@@ -15,6 +15,7 @@
     justify-content: center;
     align-items: center;
     height: 280px;
+    color: black;
 }
 
 .aboutImgInner{
@@ -70,3 +71,16 @@
         margin-bottom: 60px;
     }
 }
+
+[data-theme="dark"] .About{
+    background-color: #181A1B;
+}
+
+[data-theme="dark"] .About__geral{
+    color: #C7C2BB;
+}
+
+[data-theme="dark"] .aboutImgInner{
+    background-color: #2B9E64;
+}
+

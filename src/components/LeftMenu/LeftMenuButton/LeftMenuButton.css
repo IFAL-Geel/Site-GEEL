@@ -26,6 +26,7 @@
     width: 0px;
     background-color: black;
     transition: .3s ease;
+    overflow-x: hidden;
 }
 
 .lmLinkInner > div > p{

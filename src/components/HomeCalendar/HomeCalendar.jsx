@@ -55,6 +55,7 @@ export default function HomeCalendar(props){
                     {events[index].dates != undefined ? events[index].dates.map((evento, indiceEvento) => (
                         <EventComp key={`evento_${indiceEvento}`} title={evento.title} start={evento.start} end={evento.end} />
                     )) : !screen && <NothingData text="eventos"/>}
+
                 </div>
             </div>
         </div>

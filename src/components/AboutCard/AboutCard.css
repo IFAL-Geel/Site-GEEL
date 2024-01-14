@@ -128,3 +128,7 @@
         margin-top: 10px;
     }
 }
+
+[data-theme="dark"] .AboutCard{
+    background-color: #C7C2BB;
+}

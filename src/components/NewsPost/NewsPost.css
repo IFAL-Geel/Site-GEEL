@@ -59,12 +59,16 @@
 
 .npDesc{
     width: 100%;
-    color: black;
+    color: rgb(100, 100, 100);
     font-size: .8em;
 }
 
 .NewsPostInner:hover{
     transform: scale(1.01);
+}
+
+.npTitle{
+    color: black;
 }
 
 @media only screen and (max-width: 900px){
@@ -83,4 +87,18 @@
     .npDesc{
         font-size: .7em;
     }
+}
+
+[data-theme="dark"] .NewsPostInner{
+    background-color: #26292B;
+    outline-color: #26292B;
+    box-shadow: none;
+}
+
+[data-theme="dark"] .npDesc{
+    color: #8b8b89  ;
+}
+
+[data-theme="dark"] .npMoreInfoInner, [data-theme="dark"] .npTitle{
+    color: #C7C2BB;
 }

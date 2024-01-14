@@ -277,3 +277,16 @@ select:focus{
     visibility: hidden;
   }
 }
+
+[data-theme="dark"] .ReportInner{
+  background-color: #181A1B;
+}
+
+[data-theme="dark"] .reportFormInner{
+  background-color: #26292B;
+  border-color: #26292B;
+}
+
+[data-theme="dark"] .reportArea{
+  background-color: #f3f3f3;
+}

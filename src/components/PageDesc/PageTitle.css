@@ -60,3 +60,19 @@
         display: none;
     }
 }
+
+[data-theme="dark"] .text_inner > hr{
+    background-color: #2B9E64;
+}
+
+[data-theme="dark"] .pageDescInner{
+    color: #C7C2BB;
+}
+
+[data-theme="dark"] .pd_date > span{
+    color: #C7C2BB;
+}
+
+[data-theme="dark"] .pd_date{
+    color: #2B9E64;
+}

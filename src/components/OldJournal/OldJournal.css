@@ -39,3 +39,9 @@
 .oldJournalOverlay > i:hover{
     color: black;
 }
+
+@media (prefers-color-scheme:dark){
+    .oldJournalInner{
+        background-color: #E8E6E3;
+    }
+}

@@ -67,3 +67,37 @@
         gap: 20px 0;
     }
 }
+
+
+
+[data-theme="dark"] .hc_menu_inner > button{
+    border-color: #2B9E64;
+    background-color: #181a1b;
+    color: #C7C2BB;
+}
+
+[data-theme="dark"] .hc_menu_inner > button:hover{
+    background-color: #282929;
+}
+[data-theme="dark"] .hc_menu_inner > button.active{
+    background-color: #2B9E64;
+    color: white;
+}
+
+[data-theme="dark"] .hc_events_inner{
+    background-color: #181a1b;
+}
+
+[data-theme="dark"] .hc_events_inner::-webkit-scrollbar {
+    width: 16px;
+}
+
+[data-theme="dark"] .hc_events_inner::-webkit-scrollbar-track {
+    background: #181a1b;
+}
+
+[data-theme="dark"] .hc_events_inner::-webkit-scrollbar-thumb {
+    background-color: rgb(116, 116, 116);
+    border: 2px solid transparent;
+    background-clip: content-box;
+}

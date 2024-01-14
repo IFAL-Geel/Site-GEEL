@@ -28,3 +28,9 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid transparent;
   background-clip: content-box;
 }
+
+
+[data-theme="dark"] body
+{
+  background: #2b9e64;
+}

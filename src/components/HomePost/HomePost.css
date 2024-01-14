@@ -34,3 +34,20 @@
 .hp_text:hover{
     color: var(--hover-color, black);
 }
+
+
+[data-theme="dark"] .hp_text:hover{
+    opacity: .8;
+}
+
+[data-theme="dark"] .hp_text{
+    color: #C7C2BB;
+}
+
+[data-theme="dark"] .hp_line{
+    opacity: .8;
+}
+
+[data-theme="dark"] .hp_date{
+    opacity: .9;
+}

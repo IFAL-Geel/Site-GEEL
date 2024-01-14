@@ -37,3 +37,8 @@
         height: 28px;
     }
 }
+
+
+[data-theme="dark"] .imgUserInner{
+    outline-color: #2B9E64;
+}

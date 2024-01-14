@@ -12,3 +12,16 @@
 .LinkTitle:hover{
     background-color: #247740;
 }
+
+
+[data-theme="dark"] .LinkTitle{
+    background-color: #2b9e64;
+    color: #ffffff;
+}
+
+[data-theme="dark"] .LinkTitle:hover{
+    background-color: #195e3b;
+}
+
+/* #2B9E64 */
+/* #C7C2BB */
