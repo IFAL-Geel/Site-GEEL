@@ -6,7 +6,7 @@ export default function AdmOption(props){
     return(
         <Link className="AdmOption">
             <div className="AdmOptionL">
-                <i class={props.icon ? "fa-regular fa-" + props.icon : "fa-regular fa-plus"}></i>
+                <i class={props.icon ? props.icon : "fa-regular fa-plus"}></i>
             </div>
 
             <div className="lineAdm"></div>
