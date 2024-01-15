@@ -28,6 +28,14 @@
     transition: left .3s ease;
 }
 
+.dkm_icon{
+    transition: .8s ease;
+}
+
+[data-theme="dark"] .dkm_icon{
+    transform: rotateZ(360deg);
+}
+
 [data-theme="dark"] .DarkToggle{
     background-color: #5F4CFE;
 }
