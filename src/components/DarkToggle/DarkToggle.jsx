@@ -10,10 +10,12 @@ export default function DarkToggle(props){
 
     useEffect(() => {
         const icon = document.querySelector(".dkm_icon")
+        const div = document.querySelector(".dkm_btn")
 
         icon.classList.add(darkMode ? "fa-moon" : "fa-sun")
         icon.classList.remove(darkMode ? "fa-sun" : "fa-moon")
         icon.style.color = darkMode ? "#5F4CFE" : "#FCAF4F"
+        div.style.boxShadow = darkMode ? "none" : "rgba(0, 0, 0, 0.24) 0px 3px 8px"
         localStorage.setItem("@DarkMode:Active", darkMode ? "dark" : "light")
         document.documentElement.setAttribute("data-theme", darkMode ? "dark" : "light")
     }, [darkMode])
@@ -24,7 +26,7 @@ export default function DarkToggle(props){
 
     return(
         <div onClick={() => setDarkMode(!darkMode)} className="DarkToggle">
-            <div className="">
+            <div className="dkm_btn">
                 <i className="fa-solid fa-sun dkm_icon" style={{color: "#FCAF4F"}}></i>
             </div>
         </div>
