@@ -1,7 +1,7 @@
 .DarkToggle{
     width: 35px;
     height: 15px;
-    background-color: #EAEDF0;
+    background-color: #FCAF4F;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +20,7 @@
     left: 0px;
     right: auto;
     border-radius: 50%;
-    border: 1px solid #EAEDF0;
+    border: 1px solid #FCAF4F;
     display: flex;
     align-items: center;
     justify-content: center;
