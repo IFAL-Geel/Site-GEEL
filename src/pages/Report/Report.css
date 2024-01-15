@@ -279,14 +279,20 @@ select:focus{
 }
 
 [data-theme="dark"] .ReportInner{
-  background-color: #181A1B;
+  background-color: #14171D;
 }
 
 [data-theme="dark"] .reportFormInner{
-  background-color: #26292B;
-  border-color: #26292B;
+  background-color: #1B1E25;
+  border-color: #1B1E25;
 }
 
 [data-theme="dark"] .reportArea{
-  background-color: #f3f3f3;
+  background-color: #353941;
+  outline-color: #353941;
+  color: #BFFFD5;
+}
+
+[data-theme="dark"] .iconInner, [data-theme="dark"] .iconDropInner{
+  background-color: #139E59;
 }

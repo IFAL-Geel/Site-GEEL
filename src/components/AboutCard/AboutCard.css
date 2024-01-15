@@ -130,5 +130,15 @@
 }
 
 [data-theme="dark"] .AboutCard{
-    background-color: #C7C2BB;
+    background-color: #1B1E25;
+}
+
+[data-theme="dark"] .AboutCard__content__body > p{
+    color: #C9CED8;
+}
+[data-theme="dark"] .AboutCard__content__header > h3{
+    color: #C9CED8;
+}
+[data-theme="dark"] .AboutCard__content__header > h4{
+    color: #7b7e83;
 }

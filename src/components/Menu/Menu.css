@@ -5,7 +5,6 @@
     align-items: center;
     padding: 35px 0;
     background: rgb(255,255,255);
-    transition: .5s ease;
     position: relative;
 }
 
@@ -69,6 +68,11 @@
     right: 30px;
 }
 
+.mn_darkMode_inner{
+    position: absolute;
+    left: 30px;
+}
+
 @media only screen and (max-width: 900px){
     .MenuHorizontal{
         display: none;
@@ -81,11 +85,11 @@
 }
 
 [data-theme="dark"] .MenuHorizontal, .MenuDock{
-    background-color: #181A1B;
+    background-color: #14171D;
 }
 
 [data-theme="dark"] .MenuHorizontal > a{
-    color: #C7C2BB;
+    color: #C9CED8;
 }
 
 [data-theme="dark"] .MenuActive{

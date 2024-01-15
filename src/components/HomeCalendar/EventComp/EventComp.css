@@ -34,3 +34,8 @@
     text-align: center;
     text-transform: uppercase;
 }
+
+[data-theme="dark"] .EventComp{
+    background-color: white;
+    color: black;
+}

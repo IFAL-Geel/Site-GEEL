@@ -73,11 +73,11 @@
 }
 
 [data-theme="dark"] .About{
-    background-color: #181A1B;
+    background-color: #14171D;
 }
 
 [data-theme="dark"] .About__geral{
-    color: #C7C2BB;
+    color: #C9CED8;
 }
 
 [data-theme="dark"] .aboutImgInner{

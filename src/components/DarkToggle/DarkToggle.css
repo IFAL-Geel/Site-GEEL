@@ -1,23 +1,41 @@
 .DarkToggle{
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 50%;
+    width: 35px;
+    height: 15px;
+    background-color: #EAEDF0;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #FF9F00;
-    border: 1px solid #181a1B;
-    outline: 1px solid white;
     cursor: pointer;
+    border-radius: 20px;
+    position: relative;
+    transition: .3s ease;
+    transition-delay: .15s;
+}
+
+.DarkToggle > div{
     position: absolute;
-    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    left: 0px;
+    right: auto;
+    border-radius: 50%;
+    border: 1px solid #EAEDF0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .75em;
+    transition: left .3s ease;
 }
 
 [data-theme="dark"] .DarkToggle{
-    background-color: #181a1B;
-    border-color: #C7C2BB;
-    outline-color: #181a1B;
-    color: #C1E3F8;
+    background-color: #5F4CFE;
+}
+
+[data-theme="dark"] .DarkToggle > div{
+    background-color: #14171D;
+    border-color: #5F4CFE;
+    right: 0;
+    left: calc(100% - 20px);
 }
 

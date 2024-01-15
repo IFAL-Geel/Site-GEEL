@@ -116,3 +116,25 @@
     }
 }
 
+[data-theme="dark"] .Auth{
+    background-color: #14171D;
+}
+
+[data-theme="dark"] .Auth > form > h1, [data-theme="dark"] .Auth > form > p, [data-theme="dark"] .Auth > form > h2, [data-theme="dark"] .Auth > form > label, [data-theme="dark"] .Auth > form > div > label{
+    color: #C9CED8;
+}
+
+[data-theme="dark"] .Auth > form{
+    background-color: #1B1E25;
+    border-color: #1B1E25;
+    box-shadow: none;
+}
+
+[data-theme="dark"] .auth_input> input{
+    border: none;
+}
+
+[date-theme="dark"] .btn-login{
+    border: none !important;
+    background-color: #2B9E64 !important;
+}

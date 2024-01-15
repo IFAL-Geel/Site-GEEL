@@ -38,7 +38,7 @@ export default function HomePost(props) {
 
             <div className="hp_texts">
                 <p className="hp_date" style={{color: props.color ?? "black"}}>{props.date != null ? finaldate : "01/01/000"}1</p>
-                <Link style={{"--hover-color": props.color ?? "black"}} key={props.id} to={`/news/${props.id}`} className="hp_text">{props.text != null ? props.text.slice(0, textLimit) + "..." : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima quod vel dolores nulla aperiam esse nihil autem pariatur voluptatem amet harum neque nisi aliquid, vero, animi nam unde veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit"}</Link>
+                <Link style={{"--hover-color": props.color ?? "black", "--hover-black-color": props.colorDark ?? "black"}} key={props.id} to={`/news/${props.id}`} className="hp_text">{props.text != null ? props.text.slice(0, textLimit) + "..." : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore minima quod vel dolores nulla aperiam esse nihil autem pariatur voluptatem amet harum neque nisi aliquid, vero, animi nam unde veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit"}</Link>
             </div>
         </div>
     )

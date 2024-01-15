@@ -6,6 +6,7 @@ import UserButton from "../UserButton/UserButton";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts/InstagramAPI/authContext";
 import { ApiProvider, useApi } from "../../contexts/InstagramAPI/InstagramAPI";
+import DarkToggle from "../DarkToggle/DarkToggle";
 
 export default function Menu(props) {
 
@@ -112,6 +113,9 @@ export default function Menu(props) {
     return (
         <div className="Menu">
             <div className="MenuHorizontal">
+                <div className="mn_darkMode_inner">
+                    <DarkToggle />
+                </div>
                 <Link onClick={() => {selectLink("homeLink"); fetchData()}} className={`MenuLink homeLink ${path.pathname === "/" ? "MenuActive" : ""}`} to="/">
                     Início
                 </Link>

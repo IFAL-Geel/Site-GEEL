@@ -90,15 +90,15 @@
 }
 
 [data-theme="dark"] .NewsPostInner{
-    background-color: #26292B;
-    outline-color: #26292B;
+    background-color: #1B1E25;
+    outline-color: #1B1E25;
     box-shadow: none;
 }
 
 [data-theme="dark"] .npDesc{
-    color: #8b8b89  ;
+    color: #c9ced8af  ;
 }
 
 [data-theme="dark"] .npMoreInfoInner, [data-theme="dark"] .npTitle{
-    color: #C7C2BB;
+    color: #C9CED8;
 }

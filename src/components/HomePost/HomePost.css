@@ -38,10 +38,11 @@
 
 [data-theme="dark"] .hp_text:hover{
     opacity: .8;
+    color: var(--hover-black-color, black);
 }
 
 [data-theme="dark"] .hp_text{
-    color: #C7C2BB;
+    color: #C9CED8;
 }
 
 [data-theme="dark"] .hp_line{

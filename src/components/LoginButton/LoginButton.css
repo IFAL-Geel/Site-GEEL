@@ -42,3 +42,15 @@
     margin-right: 5px;
 }
 
+[data-theme="dark"] .LoginButton{
+    color: #C9CED8;
+    border-color: #C9CED8;
+}
+
+[data-theme="dark"] .LoginButton::after{
+    background-color: #C9CED8;
+}
+
+[data-theme="dark"] .LoginButton:hover{
+    color: #14171D;
+}

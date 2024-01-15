@@ -41,3 +41,14 @@
         width: 100%;
     }
 }
+
+[data-theme="dark"] .AdmOption{
+    background-color: #1B1E25;
+    outline-color: #1B1E25;
+    box-shadow: none;
+    color: #C9C5D2;
+}
+
+[data-theme="dark"] .AdmOption:hover{
+    background-color: #282c35;
+}

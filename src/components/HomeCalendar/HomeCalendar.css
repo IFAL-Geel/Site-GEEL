@@ -72,8 +72,8 @@
 
 [data-theme="dark"] .hc_menu_inner > button{
     border-color: #2B9E64;
-    background-color: #181a1b;
-    color: #C7C2BB;
+    background-color: #14171D;
+    color: #C9CED8;
 }
 
 [data-theme="dark"] .hc_menu_inner > button:hover{
@@ -85,7 +85,7 @@
 }
 
 [data-theme="dark"] .hc_events_inner{
-    background-color: #181a1b;
+    background-color: #14171D;
 }
 
 [data-theme="dark"] .hc_events_inner::-webkit-scrollbar {
@@ -93,7 +93,7 @@
 }
 
 [data-theme="dark"] .hc_events_inner::-webkit-scrollbar-track {
-    background: #181a1b;
+    background: #14171D;
 }
 
 [data-theme="dark"] .hc_events_inner::-webkit-scrollbar-thumb {

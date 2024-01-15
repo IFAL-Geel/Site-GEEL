@@ -241,11 +241,11 @@
 /* ### DARK THEME ### */
 
 [data-theme="dark"] .HomeFeed{
-    background-color: #181A1B;
+    background-color: #14171D;
 }
 
-[data-theme="dark"] .HomeFridayCult, .HomeCalendar{
-    background-color: #26292B;
+[data-theme="dark"] .HomeFridayCult, [data-theme="dark"] .HomeCalendar{
+    background-color: #1B1E25;
 }
 
 [data-theme="dark"] .HomeJournal{
@@ -253,29 +253,29 @@
 }
 
 [data-theme="dark"] .hjRTextsInner > h1{
-    color: #E8E6E3;
+    color: #ffffff;
 }
 
 [data-theme="dark"] .hjRLinkAll{
-    color: #E8E6E3;
-    outline-color: #E8E6E3;
+    color: white;
+    outline-color: white;
 }
 
 [data-theme="dark"] .hjRLinkAll:hover{
-    background-color: #E8E6E3;
+    background-color: white;
     color: #002E5D;
 }
 
 [data-theme="dark"] .hjRLink{
-    background-color: #E8E6E3;
+    background-color: white;
     color: #002E5D;
 }
 
 [data-theme="dark"] .hjRLink:hover{
-    outline-color: #E8E6E3;
-    color: #E8E6E3;
+    outline-color: white;
+    color: white;
 }
 
 [data-theme="dark"] .HomeCourses{
-    background-color: #181A1B;
+    background-color: #14171D;
 }

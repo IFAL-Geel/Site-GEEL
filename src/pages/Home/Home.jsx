@@ -56,7 +56,7 @@ export default function Home(props) {
                             </div>
                             <div className="lp_text_inner">
                                 {slicedPost.map((post) => (
-                                    <HomePost id={post.id} date={post.timestamp} text={post.caption} color="#D91159"/>
+                                    <HomePost id={post.id} date={post.timestamp} text={post.caption} color="#D91159" colorDark="#EF387A" />
                                 ))}
                             </div>
                         </div>
