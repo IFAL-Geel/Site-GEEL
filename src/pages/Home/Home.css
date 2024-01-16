@@ -240,7 +240,7 @@
 
 /* ### DARK THEME ### */
 
-[data-theme="dark"] .HomeFeed{
+[data-theme="dark"] .HomeFeed, [data-theme="dark"] .Home{
     background-color: #14171D;
 }
 

@@ -6,7 +6,8 @@
     height: auto;
     background-color: white;
     z-index: 1000;
-    border: 1px solid rgb(241, 241, 241);
+    border: 1px solid #f1f1f1;
+    border-color: #f1f1f1 #f1f1f1 #f1f1f1 white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,3 +22,8 @@
     align-items:flex-start;
     padding-left: 12px
 } */
+
+[data-theme="dark"] .LeftMenu{
+    background-color: #14171D;
+    border-color: #0e1116 #0e1116 #0e1116 #14171D;
+}

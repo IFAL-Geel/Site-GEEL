@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import "./Auth.css"
-import { AuthContext } from "../../contexts/InstagramAPI/authContext"
+import { AuthContext } from "../../contexts/authContext"
 import { useNavigate } from "react-router-dom"
 
 export default function Auth() {

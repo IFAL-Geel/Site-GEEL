@@ -9,29 +9,38 @@ import BackTop from "../components/BackTop/BackTop"
 import Journals from "../pages/Journals/Journals"
 import LeftMenu from "../components/LeftMenu/LeftMenu"
 import Auth from "../pages/Auth/Auth"
-import AuthProvider from "../contexts/InstagramAPI/authContext"
+import AuthProvider from "../contexts/authContext"
 import Admin from "../pages/Admin/Admin"
 import PrivateRoute from "./PrivateRoute"
 import { useEffect } from "react"
+import DataProvider from "../contexts/firestoreData/firestoreDataContext"
+import AddFriday from "../pages/AddFriday/AddFriday"
+import Files from "../pages/Files/Files"
+import AddFile from "../pages/AddFile/AddFile"
 
 export default function AppRoutes(props) {
     return(
         <BrowserRouter>
             <AuthProvider>
-                <BackTop />
-                <Menu />
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/news" element={<News />} />
-                    <Route path="/news/:postId" element={<Post />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/reportChannel" element={<Report />} />
-                    <Route path="/journal" element={<Journals />} />
-                    <Route path="/auth" element={<Auth />} />
-                    <Route path="/admin" element={<PrivateRoute />}>
-                        <Route path="/admin" element={<Admin />} />
-                    </Route>
-                </Routes>
+                <DataProvider>
+                    <BackTop />
+                    <Menu />
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/news" element={<News />} />
+                        <Route path="/news/:postId" element={<Post />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/reportChannel" element={<Report />} />
+                        <Route path="/journal" element={<Journals />} />
+                        <Route path="/auth" element={<Auth />} />
+                        <Route path="/admin" element={<PrivateRoute />}>
+                            <Route path="/admin" element={<Admin />} />
+                        </Route>
+                        <Route path="admin/friday" element={<AddFriday />} />
+                        <Route path="admin/file" element={<AddFile />} />
+                        <Route path="/files" element={<Files />} />
+                    </Routes>
+                </DataProvider>
             </AuthProvider>
         </BrowserRouter>
     )

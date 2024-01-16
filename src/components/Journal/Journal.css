@@ -1,11 +1,16 @@
 .JournalInner{
-    width: 250px;
-    height: 250px;
-    background-color: #003a74;
+    width: 180px;
+    height: 180px;
+    background-color: #ee080f;
     border-radius: 10px;
-    margin: 0 7px 7px 0;
     position: relative;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    font-weight: 500;
 }
 
 .journalOverlay{
@@ -14,18 +19,36 @@
     right: 0;
     height: 100%;
     width: 0px;
-    background-color: #C6151C;
+    background-color: #003a74;
     border-radius: 0 10px 10px 0;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
     overflow-x: hidden;
     display: flex;
-    transition: .3s ease;
+    transition: width .3s ease, outline .3s ease .1s;
+    outline: 1px solid transparent;
 }
 
 .JournalInner:hover .journalOverlay{
-    width: 80px;
-    transition: .5s ease;
+    width: 60px;
+    transition: width .5s ease , outline .3s ease;
+    outline: 1px solid #003a74;
+    border-radius: 0 10px 10px 0;
+}
+
+.JournalInner > i{
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+[data-theme="dark"] .JournalInner{
+    background-color: transparent;
+    outline: 1px solid #ee080f;
+    color: #ee080f;
+}
+
+[data-theme="dark"] .journalOverlay{
+    background-color: #14171D;
 }

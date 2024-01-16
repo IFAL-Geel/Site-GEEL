@@ -1,16 +1,27 @@
 import "./Admin.css"
 import AdmOption from "../../components/AdmOption/AdmOption"
-import { useContext } from "react"
-import { AuthContext } from "../../contexts/InstagramAPI/authContext"
+import { useContext, useEffect, useState } from "react"
+import { AuthContext } from "../../contexts/authContext"
+import { useLocation } from "react-router-dom"
 
 export default function Admin(props) {
 
     const { signOff, signed, userDB } = useContext(AuthContext)
+    const location = useLocation()
+    const { uploadComplete } = location.state || {}
+    const [showUC, setShowUC] = useState(true)
+
+    useEffect(() => {
+        if (uploadComplete) {
+            setShowUC(true);
+            const timeoutId = setTimeout(() => {
+                setShowUC(false);
+            }, 5000);
+            return () => clearTimeout(timeoutId);
+        }
+    }, [uploadComplete]);
 
     if(signed){
-
-        console.log(userDB);
-
         return(
             <div className="Admin">
                 <div className="admTopInfos">
@@ -26,10 +37,14 @@ export default function Admin(props) {
                         <AdmOption />
                         <AdmOption icon="fa-regular fa-copy" title="Novo Edital" desc="Fazer upload de edital"/>
                         <AdmOption icon="fa-regular fa-newspaper" title="Adicionar Jornal" desc="Adicione um novo jornal"/>
-                        <AdmOption icon="fa-regular fa-file-pdf" title="Adicionar Arquivo" desc="Faça upload de um pdf, docx e etc..."/>
+                        <AdmOption to="/admin/file" icon="fa-regular fa-file-pdf" title="Adicionar Arquivo" desc="Faça upload de um pdf, docx e etc..."/>
                         <AdmOption icon="fa-regular fa-calendar" title="Gerenciar Eventos" desc="Adione, exclua e altere eventos"/>
-                        <AdmOption icon="fa-solid fa-masks-theater" title="Adicionar Sexta-Cutural" desc="Adione, exclua e altere eventos"/>
+                        <AdmOption to="/admin/friday" icon="fa-solid fa-masks-theater" title="Adicionar Sexta-Cutural" desc="Adione, exclua e altere eventos"/>
                     </div>
+                </div>
+
+                <div className={`adm_upload_complete ${!showUC ? "disabled" : ""} ${uploadComplete ? "enabled" : ""}`} >
+                    <p>{uploadComplete && "Upload feito com sucesso"}</p>
                 </div>
     
             </div>

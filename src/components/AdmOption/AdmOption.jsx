@@ -4,7 +4,7 @@ import "./AdmOption.css"
 
 export default function AdmOption(props){
     return(
-        <Link className="AdmOption">
+        <Link className="AdmOption" to={props.to}>
             <div className="AdmOptionL">
                 <i class={props.icon ? props.icon : "fa-regular fa-plus"}></i>
             </div>

@@ -7,6 +7,7 @@ import { Fade } from "react-awesome-reveal"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Footer from "../../components/Footer/Footer"
+import LeftMenu from "../../components/LeftMenu/LeftMenu"
 
 export default function News(props) {
 
@@ -50,6 +51,7 @@ export default function News(props) {
         }
         return (
             <div className="News">
+                <LeftMenu />
                 <PageTitle title="Notícias" />
                 <div className="newsPostInner">
                     <Fade triggerOnce="true">

@@ -6,6 +6,7 @@ import PageTitle from "../../components/PageDesc/PageTitle.jsx";
 import logoGeel from "../../assets/images/LogoGeel_Horizontal.png";
 import data from "../../data/aboutData/diretorias.js";
 import Footer from "../../components/Footer/Footer.jsx";
+import LeftMenu from "../../components/LeftMenu/LeftMenu.jsx";
 
 export default function About(props) {
     const [index, setIndex] = useState(0);
@@ -16,6 +17,7 @@ export default function About(props) {
 
     return(
         <div className="About">
+            <LeftMenu />
             <PageTitle title="Sobre nós" />
             <div className="About__geral">
                 <div className="aboutImgInner">

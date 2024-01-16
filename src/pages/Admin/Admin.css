@@ -84,3 +84,18 @@
 [data-theme="dark"] .admTopTexts{
     color: #C9CED8;
 }
+
+.adm_upload_complete.enabled{
+    margin-top: 40px;
+    font-size: .9em;
+    font-weight: 800;
+    color: white;
+    background-color: #3BC96A;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: .2s ease;
+}
+
+.adm_upload_complete.disabled{
+    display: none;
+}

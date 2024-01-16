@@ -1,4 +1,4 @@
-.Journals{
+.Files{
     background: rgb(255,255,255);
     width: 100%;
     min-height: 100vh;
@@ -7,13 +7,12 @@
     align-items: center;
 }
 
-.journalList{
-    width: 92%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+[data-theme="dark"] .Files {
+    background-color: #14171D;
 }
 
-[data-theme="dark"] .Journals{
-    background: #14171D;
+.fl_inner{
+    width: 92%;
+    display: flex;
+    gap: 20px;
 }

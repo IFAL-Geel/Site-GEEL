@@ -8,7 +8,7 @@ export default function LeftMenu(){
             <LeftMenuButton link="/journal" color="#C6151C" />
             <LeftMenuButton text="MANUAL" color="#FFB944"/>
             <LeftMenuButton text="EDITAIS" color="#003A74"/>
-            <LeftMenuButton text="ARQUIVOS" color="#3bb562"/>
+            <LeftMenuButton link="/files" text="ARQUIVOS" color="#3bb562"/>
         </div>
     )
 }

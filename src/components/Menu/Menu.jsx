@@ -4,7 +4,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import LoginButton from "../LoginButton/LoginButton";
 import UserButton from "../UserButton/UserButton";
 import { useContext } from "react";
-import { AuthContext } from "../../contexts/InstagramAPI/authContext";
+import { AuthContext } from "../../contexts/authContext";
 import { ApiProvider, useApi } from "../../contexts/InstagramAPI/InstagramAPI";
 import DarkToggle from "../DarkToggle/DarkToggle";
 

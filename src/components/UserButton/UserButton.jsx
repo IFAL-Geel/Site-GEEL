@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./UserButton.css"
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../contexts/InstagramAPI/authContext";
+import { AuthContext } from "../../contexts/authContext";
 
 export default function UserButton(props){
 

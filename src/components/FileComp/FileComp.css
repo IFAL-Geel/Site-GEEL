@@ -1,0 +1,32 @@
+.File{
+    width: 120px;
+    height: 140px;
+    border: 1px solid #3BB562;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.File:hover{
+    transform: scale(1.05);
+}
+
+.File > i{
+    font-size: 2em;
+    color: #3BB562;
+    text-decoration: none;
+}
+
+.File > p{
+    font-size: .8em;
+    font-weight: 600;
+    color: #3BB562;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 5px;
+}

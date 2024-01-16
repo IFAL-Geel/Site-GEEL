@@ -2,6 +2,7 @@ import { useEffect } from "react"
 import Journal from "../../components/Journal/Journal"
 import PageTitle from "../../components/PageDesc/PageTitle"
 import "./Journals.css"
+import LeftMenu from "../../components/LeftMenu/LeftMenu"
 
 export default function Journals(props) {
 
@@ -12,12 +13,9 @@ export default function Journals(props) {
 
     return(
         <div className="Journals">
-            <PageTitle title="Jornais" width="95%"/>
+            <LeftMenu />
+            <PageTitle title="Jornais" width="92%"/>
             <div className="journalList">
-                <Journal />
-                <Journal />
-                <Journal />
-                <Journal />
                 <Journal />
             </div>
         </div>

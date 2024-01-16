@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { AuthContext } from "../contexts/InstagramAPI/authContext"
+import { AuthContext } from "../contexts/authContext"
 import { Outlet, Navigate } from "react-router-dom"
 
 export default function PrivateRoute(){

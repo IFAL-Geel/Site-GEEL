@@ -1,0 +1,139 @@
+.AddFriday{
+    padding-top: 30px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.AddFriday > div{
+    width: 500px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0;
+    background-color: white;
+}
+
+.af_data_inner, .af_img_inner{
+    font-weight: 800;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2c2c2c;
+    margin: 5px 0;
+}
+
+.af_data_inner{
+    font-size: .8em;
+}
+
+.af_img_inner > input{
+    display: none;
+}
+.af_label{
+    font-size: .8em;
+}
+
+.af_img_input{
+    width: 250px;
+    background: rgb(231, 231, 231);
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7em !important;
+    font-weight: 500;
+    color: gray;
+    cursor: pointer;
+}
+
+.af_img_input:hover{
+    background-color: rgb(206, 206, 206);
+}
+
+.AddFriday > div > button{
+    width: 75%;
+    outline: none;
+    border: none;
+    background-color: #3BC96A;
+    padding: 10px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.AddFriday > div > p{
+    font-size: .9em;
+    color: #4d4d4d;
+    margin-bottom: 40px;
+}
+
+.AddFriday > div > button:hover{
+    background-color: #33b35d;
+}
+
+.AddFriday > div > button:disabled{
+    background-color: #808080;
+    cursor: default;
+}
+
+[data-theme="dark"] .AddFriday{
+    background-color: #14171D;
+}
+
+.af_upload{
+    pointer-events: none;
+}
+
+.af_button.af_upload{
+    background-color: #FFB944;
+}
+
+.af_inner.af_upload{
+    background-color: #fff1d9;
+    opacity: .9;
+}
+
+[data-theme="dark"] .af_inner{
+    background-color: #1B1E25;
+    border-color: #1B1E25;
+}
+
+[data-theme="dark"] .af_inner > h1{
+    color: #C9CED8;
+}
+
+[data-theme="dark"] .af_inner > p{
+    color: #84878d;
+}
+
+[data-theme="dark"] .af_img_inner, [data-theme="dark"] .af_data_inner{
+    color: #C9CED8;
+}
+
+.af_data_inner > input{
+    border-radius: 5px;
+    border: none;
+    padding: 5px 10px;
+    background-color: #E7E7E7;
+}
+
+.af_data_inner > input:focus{
+    border: none;
+    outline: none;
+}
+
+[data-theme="dark"] .af_inner.af_upload{
+    opacity: .7;
+}

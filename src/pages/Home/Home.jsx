@@ -4,12 +4,12 @@ import { Link } from "react-router-dom"
 import { Fade } from "react-awesome-reveal"
 import { useApi } from "../../contexts/InstagramAPI/InstagramAPI"
 import LoadingBar from "../../components/LoadingBar/LoadingBar"
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
 import OldJournal from "../../components/OldJournal/OldJournal"
 import PageTitle from "../../components/PageDesc/PageTitle"
 import Footer from "../../components/Footer/Footer"
 import LeftMenu from "../../components/LeftMenu/LeftMenu"
-import cursos from "../../data/aboutData/cursos"
+import cursos from "../../data/cursos"
 import CoursesIcon from "../../components/CoursesIcon/CoursesIcon.jsx"
 import LatestPost from "../../components/LatestPost/LatestPost.jsx"
 import HomePost from "../../components/HomePost/HomePost.jsx"
@@ -17,26 +17,38 @@ import HomeFriday from "../../components/HomeFriday/HomeFriday.jsx"
 import event from "../../mock/sextasCulturais.js"
 import NothingData from "../../components/NothingData/NothingData.jsx"
 import HomeCalendar from "../../components/HomeCalendar/HomeCalendar.jsx"
+import { DataContext } from "../../contexts/firestoreData/firestoreDataContext.jsx"
 
 export default function Home(props) {
 
     const { posts } = useApi()
+    const { fireData, fridayData, filesData } = useContext(DataContext)
     const [eventIndex, setEventIndex] = useState(0)
-
+    
     useEffect(() => {
         window.scrollTo(0, 0)
-
-        const eventInterval = setInterval(() => {
-            setEventIndex((prevIndex) => (prevIndex + 1) % event.length);
-        }, 15000);
-
-        return () => clearInterval(eventInterval)
     }, [])
 
+    useEffect(() => {
+        if(fireData){
+            const eventInterval = setInterval(() => {
+                setEventIndex((prevIndex) => (prevIndex + 1) % fridayData.length);
+            }, 15000);
 
-    if(posts){
-
-        const slicedFriday = Object.values(event[eventIndex].imgs)
+            return () => clearInterval(eventInterval)
+        }
+    }, [fireData, fridayData, eventIndex])
+        
+    if(posts && fireData && filesData){
+        const fridayDataHome = fridayData
+        const indexFriday = fridayDataHome[eventIndex]
+        const slicedFriday = {
+            img1: indexFriday.img1,
+            img2: indexFriday.img2,
+            img3: indexFriday.img3,
+            img4: indexFriday.img4,
+        }
+        const arrayFridayData = Object.values(slicedFriday)
 
         const slicedPost = posts.data.slice(2, 6)
 
@@ -73,9 +85,9 @@ export default function Home(props) {
                 </div>
 
                 <div className="HomeFridayCult">
-                    <PageTitle title="Sextas Culturais" width="92%" date="true" time={event[eventIndex].data}/>
+                    <PageTitle title="Sextas Culturais" width="92%" date="true" time={fridayDataHome[eventIndex].date}/>
                     <div className="hmc_comps">
-                        {slicedFriday.map((img, index) => (
+                        {arrayFridayData.map((img, index) => (
                             <HomeFriday key={"hf_img" + index} img={img}/>
                         ))}
                     </div>
