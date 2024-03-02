@@ -12,12 +12,14 @@ export default function DataProvider({ children}){
     
     const [fridayData, setFridayData] = useState(null)
     const [filesData, setFilesData] = useState(null)
+    const [statutesData, setStatutesData] = useState(null)
     const [uploadComplete, setUploadComplete] = useState(false)
     const nav = useNavigate()
 
     useEffect(() => {
         getFridayData()
         getFilesData()
+        getStatutesData()
     }, [])
 
     async function getFridayData(){
@@ -45,6 +47,19 @@ export default function DataProvider({ children}){
 
         setFilesData(data)
     }
+    
+    async function getStatutesData(){
+        const docRef = collection(db, "statutes")
+        const docSnap = await getDocs(docRef).catch((err) => console.log(err.message))
+
+        const data = []
+        docSnap.forEach((doc) => {
+            const docData = {...doc.data() }
+            data.push(docData)
+        })
+
+        setStatutesData(data)
+    }
 
     async function postStorageData(file, folder) {
         const fileId = uuidv4()
@@ -67,17 +82,18 @@ export default function DataProvider({ children}){
         })
     }
 
-    async function uploadFileData(file, name, type){
+    async function uploadFileData(file, name, type, dir){
         try{
-            const fileURL = await postStorageData(file, "arquivos")
+            const fileURL = await postStorageData(file, dir)
 
-            await addDoc(collection(db, "files"), {
+            await addDoc(collection(db, dir), {
                 name: name,
                 type: type,
                 url: fileURL,
             })
 
             getFilesData()
+            getStatutesData()
             setUploadComplete(true);
             nav('/admin', {state: {uploadComplete: true}});
 
@@ -125,7 +141,7 @@ export default function DataProvider({ children}){
         }
     }
     
-    return <DataContext.Provider value={{ uploadFridayData, uploadFileData, getFridayData, filesData, fridayData, fireData: !!fridayData & !!filesData}}>
+    return <DataContext.Provider value={{ uploadFridayData, uploadFileData, getFilesData, statutesData, filesData, fridayData, fireData: !!fridayData & !!filesData}}>
         { children }
     </DataContext.Provider>
 }

@@ -1,0 +1,146 @@
+.AddFile{
+    padding-top: 30px;
+    width: 100%;
+    min-height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.AddFile > div{
+    width: 500px;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0;
+    background-color: white;
+}
+
+.afl_input_inner, .afl_file_inner{
+    font-weight: 800;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #2c2c2c;
+    margin: 5px 0;
+}
+
+.afl_input_inner{
+    font-size: .8em;
+}
+
+.afl_file_inner > input{
+    display: none;
+}
+.afl_label{
+    font-size: .8em;
+}
+
+.afl_img_input{
+    width: 250px;
+    background: rgb(231, 231, 231);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .7em !important;
+    font-weight: 500;
+    color: gray;
+    cursor: pointer;
+    border: 1px solid rgb(175, 175, 175)
+}
+
+.afl_file_input:hover{
+    background-color: rgb(206, 206, 206);
+}
+
+.AddFile > div > button{
+    width: 75%;
+    outline: none;
+    border: none;
+    background-color: #3BC96A;
+    padding: 10px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.AddFile > div > p{
+    font-size: .9em;
+    color: #4d4d4d;
+    margin-bottom: 40px;
+}
+
+.AddFile > div > button:hover{
+    background-color: #33b35d;
+}
+
+.AddFile > div > button:disabled{
+    background-color: #808080;
+    cursor: default;
+}
+
+[data-theme="dark"] .AddFile{
+    background-color: #14171D;
+}
+
+.afl_upload{
+    pointer-events: none;
+}
+
+.afl_button.afl_upload{
+    background-color: #FFB944;
+}
+
+.afl_inner.afl_upload{
+    background-color: #fff1d9;
+    opacity: .9;
+}
+
+[data-theme="dark"] .afl_inner{
+    background-color: #1B1E25;
+    border-color: #1B1E25;
+}
+
+[data-theme="dark"] .afl_inner > h1{
+    color: #C9CED8;
+}
+
+[data-theme="dark"] .afl_inner > p{
+    color: #84878d;
+}
+
+[data-theme="dark"] .afl_file_inner, [data-theme="dark"] .afl_input_inner{
+    color: #C9CED8;
+}
+
+.afl_input_inner > input{
+    cursor: text;
+    padding: 0 10px;
+    font-size: 1em !important;
+    width: 230px;
+    background: rgb(231, 231, 231);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: gray;
+    border: 1px solid rgb(175, 175, 175)
+}
+
+.afl_input_inner > input:focus{
+    border: 1px solid rgb(175, 175, 175)
+}
+
+[data-theme="dark"] .afl_inner.afl_upload{
+    opacity: .7;
+}

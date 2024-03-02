@@ -1,13 +1,22 @@
-import { useContext, useEffect, useState } from "react"
-import "./AddFile.css"
-import { DataContext } from "../../contexts/firestoreData/firestoreDataContext"
+import { useContext, useEffect, useState } from "react";
+import { DataContext } from "../../contexts/firestoreData/firestoreDataContext";
+import "./AddStatute.css"
 
-export default function AddFile(){
-    
+export default function AddStatute(){
+
     const { uploadFileData } = useContext(DataContext)
     const [selectedFile, setSelectedFile] = useState(null)
-    const [fileName, setFileName] = useState()
-    const [fileType, setFileType] = useState()
+    const [fileName, setFileName] = useState("")
+    const [fileType, setFileType] = useState(null)
+
+    useEffect(() => {
+        const button = document.querySelector(".af_button")
+        if(selectedFile && fileName && fileType){
+            button.disabled = false
+        } else {
+            button.disabled = true
+        }
+    }, [selectedFile, fileName, fileType])
 
     const handleFileChange = (event) => {
         const file = event.target.files[0]
@@ -27,25 +36,16 @@ export default function AddFile(){
         }
     };
 
-    useEffect(() => {
-        const button = document.querySelector(".af_button")
-        if(selectedFile && fileName && fileType){
-            button.disabled = false
-        } else {
-            button.disabled = true
-        }
-    }, [selectedFile, fileName, fileType])
-
     const postFileData = (e) => {
         e.preventDefault()
-        uploadFileData(selectedFile, fileName, fileType, "files")
+        uploadFileData(selectedFile, fileName, fileType, "statutes")
     }
 
     return(
         <div className="AddFile">
             <div className="afl_inner">
-                <h1>Arquivo</h1>
-                <p>upload de arquivos para o site</p>
+                <h1>Edital</h1>
+                <p>upload de editais para o site</p>
 
                 <div className="afl_input_inner">
                     <label htmlFor="afl_name">Nome:</label>

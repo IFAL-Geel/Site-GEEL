@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import FileComp from "../../components/FileComp/FileComp"
 import PageTitle from "../../components/PageDesc/PageTitle"
 import "./Files.css"
@@ -7,9 +7,13 @@ import LeftMenu from "../../components/LeftMenu/LeftMenu"
 
 export default function Files(props){
 
-    const { filesData } = useContext(DataContext)
+    const { filesData, getFilesData } = useContext(DataContext)
 
     console.log(filesData);
+
+    useEffect(() => {
+        getFilesData()
+    }, [])
 
     return(
         <div className="Files">

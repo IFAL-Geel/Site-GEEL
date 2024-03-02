@@ -17,6 +17,7 @@ import DataProvider from "../contexts/firestoreData/firestoreDataContext"
 import AddFriday from "../pages/AddFriday/AddFriday"
 import Files from "../pages/Files/Files"
 import AddFile from "../pages/AddFile/AddFile"
+import AddStatute from "../pages/AddStatute/AddStatute"
 
 export default function AppRoutes(props) {
     return(
@@ -38,6 +39,7 @@ export default function AppRoutes(props) {
                         </Route>
                         <Route path="admin/friday" element={<AddFriday />} />
                         <Route path="admin/file" element={<AddFile />} />
+                        <Route path="admin/statute" element={<AddStatute />} />
                         <Route path="/files" element={<Files />} />
                     </Routes>
                 </DataProvider>
